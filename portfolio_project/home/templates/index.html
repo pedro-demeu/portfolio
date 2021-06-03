@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEDRO</title>
+
+    <!-- Importação do Framework Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Importação do estilo da navegação -->
+    <link href="{% static 'home/css/navbar-style.css' %}" rel="stylesheet">
 </head>
 <body>
-    <h1>Ola mundo</h1>
+    
+    <!-- Navegação do site -->
+     <header id="header" class="bg-dark">
+        <a id="logo" href="" class="text-white">Logo</a>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" class="text-white" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="/" class="text-white">Sobre</a></li>
+                <li><a href="/" class="text-white">Projetos</a></li>
+                <li><a href="/" class="text-white">Parceiros</a></li>
+                <li><a href="/" class="text-white">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Importação do Javascript para a navegação-->
+    <script src="{% static 'home/js/script.js' %}"></script>
+
+    <!-- Importação do Bundle Javascript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

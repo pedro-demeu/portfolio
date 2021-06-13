@@ -1,0 +1,8 @@
+#section_01{
+    height: calc(100vh - 70px);
+    padding: 6rem 0;
+}
+#section_01 a {
+    text-decoration: none;
+    border: none;
+}

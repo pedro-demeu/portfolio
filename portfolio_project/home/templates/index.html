@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,45 @@
     <title>PEDRO</title>
 
     <!-- Importação do Framework Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Importação do estilo da navegação -->
+    <link href="{% static 'home/css/global.css' %}" rel="stylesheet">
 
     <!-- Importação do estilo da navegação -->
     <link href="{% static 'home/css/navbar-style.css' %}" rel="stylesheet">
+
+    <!-- Importação do estilo da primeira sessão  -->
+    <link href="{% static 'home/css/section-01.css' %}" rel="stylesheet">
+
+    <!-- Importação do estilo da segunda sessão  -->
+    <link href="{% static 'home/css/section-02.css' %}" rel="stylesheet">
+
+    <!-- Importação do estilo da terceira sessão  -->
+    <link href="{% static 'home/css/section-03.css' %}" rel="stylesheet">
+
+    <!-- Importação do estilo da quarta sessão  -->
+    <link href="{% static 'home/css/section-04.css' %}" rel="stylesheet">
+
+    <!-- Importação do estilo da quinta sessão  -->
+    <link href="{% static 'home/css/section-05.css' %}" rel="stylesheet">
+
+    <!-- Importação da fonte usada no projeto -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;800&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
+
     <!-- Navegação do site -->
-     <header id="header" class="bg-dark">
+    <header id="header" class="">
         <a id="logo" href="" class="text-white">Logo</a>
         <nav id="nav">
-            <button aria-label="Abrir Menu" id="btn-mobile" class="text-white" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+            <button aria-label="Abrir Menu" id="btn-mobile" class="text-white" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">Menu
                 <span id="hamburger"></span>
             </button>
             <ul id="menu" role="menu">
@@ -31,17 +59,84 @@
         </nav>
     </header>
 
-    <!-- Primeira sessão do site -->
-    <section id="section_01">
-        <h1>Web Developer & <br>Back-End Developer</h1>
-        <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro</p>
-        <a href=""><button>Saiba mais</button></a>
-    </section>
+    <main>
+        <!-- Primeira sessão do site -->
+        <section id="section_01">
+            <div class="col-md-6">
+                <h1>Web Developer & <br>Back-End Developer</h1>
+                <br>
+                <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a
+                    ser o
+                    texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um
+                    texto
+                    para criar um espécime de livro</p>
+                <br>
+                <a href=""><button class="botao-saiba-mais w-50">Saiba mais</button></a>
+            </div>
+        </section>
+
+
+        <!-- Segunda sessão do site -->
+        <section id="section_02">
+            <h1 class="text-center">Conhecimentos</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Back-End</h5>
+                            <img src="{% static 'home/img/django-logo.jpg' %}" class="card-img-top" style="width: 120px;" alt="...">
+                            <img src="{% static 'home/img/rest.png' %}" class="card-img-top" style="width: 120px;" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Diferenciais</h5>
+                            <img src="{% static 'home/img/angular.png' %}" class="card-img-top" style="width: 120px;" alt="...">
+                            <img src="{% static 'home/img/bootstrap.png' %}" class="card-img-top" style="width: 120px;" alt="...">
+                            <img src="{% static 'home/img/vue.jpg' %}" class="card-img-top" style="width: 120px;" alt="...">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Front-End</h5>
+                            <img src="{% static 'home/img/frontend.png' %}" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Terceira sessão do site -->
+        <section id="section_02">
+            <h1>Projetos</h1>
+            <div class="card">Projeto 01</div>
+            <div class="card">Projeto 02</div>
+            <div class="card">Projeto 03</div>
+        </section>
+
+
+        <!-- Quarta sessão do site -->
+        <section id="section_02">
+            <h1>Contato</h1>
+            <div class="card">Whatsapp</div>
+            <div class="card">Instagram</div>
+            <div class="card">Email</div>
+        </section>
+    </main>
 
     <!-- Importação do Javascript para a navegação-->
     <script src="{% static 'home/js/script.js' %}"></script>
 
     <!-- Importação do Bundle Javascript Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

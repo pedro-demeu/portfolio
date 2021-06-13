@@ -1,0 +1,23 @@
+* {
+    font-family: 'Roboto', cursive;
+}
+h1 {
+    font-weight: 700;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+.botao-saiba-mais{
+    background: rgb(33, 2, 41);
+    text-align: center;
+    color: rgb(255, 208, 0);
+    border: 1px solid gray;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.521);
+    border-radius: 25px;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 20px;
+}

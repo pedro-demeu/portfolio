@@ -11,6 +11,7 @@ export default function HomeSession() {
         width: "100%",
         maxWidth: "800px",
         margin: "0 auto",
+        height: "100vh",
       }}
     >
       <Box
@@ -77,12 +78,48 @@ export default function HomeSession() {
           mb: "1rem",
         }}
       >
-        Eu sou o <strong>Pedro</strong>, um{" "}
-        <strong>engenheiro de software</strong> com 5 anos de experiência, que transforma ideias em{" "}
-        <strong>produtos digitais incríveis.</strong> Meu trabalho vai além de
-        escrever código: eu entendo o seu negócio e construo{" "}
-        <strong>interfaces simples e eficientes</strong> que resolvem problemas
-        reais do seu negócio.
+        Eu sou o{" "}
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          Pedro
+        </strong>
+        , um{" "}
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          engenheiro de software
+        </strong>{" "}
+        com{" "}
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          5 anos de experiência
+        </strong>
+        , que transforma ideias em{" "}
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          produtos digitais incríveis.
+        </strong>{" "}
+        Meu trabalho vai além de escrever código: eu entendo o seu negócio e
+        construo{" "}
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          interfaces simples e eficientes
+        </strong>{" "}
+        que resolvem problemas reais do seu negócio.
       </Typography>
       <Typography
         sx={{
@@ -91,39 +128,84 @@ export default function HomeSession() {
           mb: "2rem",
         }}
       >
-        Atualmente, estou atuando como <strong>desenvolvedor frontend</strong>{" "}
+        Atualmente, estou atuando como{" "}
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          desenvolvedor frontend
+        </strong>{" "}
         em um produto de
-        <strong> videomonitoramento</strong>, usando <strong>React</strong> e{" "}
-        <strong>TypeScript</strong> para entregar soluções que funcionam bem e
-        geram valor para os clientes.
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          {" "}
+          videomonitoramento
+        </strong>
+        , usando{" "}
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          React
+        </strong>{" "}
+        e{" "}
+        <strong
+          style={{
+            color: "#DDD",
+          }}
+        >
+          TypeScript
+        </strong>{" "}
+        para entregar soluções que funcionam bem e geram valor para os clientes.
       </Typography>
       <Box
         sx={{
           display: "flex",
-          gap: "2rem",
+          flexDirection: "row",
+          justifyContent: "space-between",
         }}
       >
-        <Button
-          variant="outlined"
-          color="inherit"
+        <Box
           sx={{
-            textTransform: "none",
+            display: "flex",
+            gap: "2rem",
           }}
         >
-          Conhecer Mais
-        </Button>
-        <Button
-          sx={{
-            backgroundColor: "#f0f0f0",
-            color: "#191919",
-            "&:hover": {
-              backgroundColor: "#e0e0e0",
-            },
-            textTransform: "none",
-          }}
-        >
-          Contate-me 👋
-        </Button>
+          <Button
+            variant="outlined"
+            color="inherit"
+            sx={{
+              textTransform: "none",
+            }}
+          >
+            Conhecer Mais
+          </Button>
+          <Button
+            sx={{
+              backgroundColor: "#f0f0f0",
+              color: "#191919",
+              "&:hover": {
+                backgroundColor: "#e0e0e0",
+              },
+              textTransform: "none",
+            }}
+          >
+            Contate-me 👋
+          </Button>
+        </Box>
+        <Box sx={{}}>
+          <Button variant="text" size="small">
+            GITHUB
+          </Button>
+          <Button variant="text" size="small">
+            LINKEDIN
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

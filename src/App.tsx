@@ -1,5 +1,5 @@
 import { Box, Container } from "@mui/material";
-import { HomeSession } from "./components/sessions";
+import { HomeSession, ProjectsSession } from "./components/sessions";
 
 function App() {
   return (
@@ -10,18 +10,18 @@ function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
-        width: "100vw",
+        flexDirection: "column",
+        pb: "12rem",
       }}
     >
       <Container
         sx={{
-          display: "flex",
-          height: "100vh",
+          height: "100%",
           width: "100vw",
         }}
       >
         <HomeSession />
+        <ProjectsSession />
       </Container>
     </Box>
   );

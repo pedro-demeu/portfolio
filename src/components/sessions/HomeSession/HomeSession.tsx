@@ -78,21 +78,13 @@ export default function HomeSession() {
           mb: "1rem",
         }}
       >
-        Eu sou o{" "}
+        Sou um
         <strong
           style={{
             color: "#DDD",
           }}
         >
-          Pedro
-        </strong>
-        , um{" "}
-        <strong
-          style={{
-            color: "#DDD",
-          }}
-        >
-          engenheiro de software
+        {" "}engenheiro de software
         </strong>{" "}
         com{" "}
         <strong
@@ -143,7 +135,7 @@ export default function HomeSession() {
           }}
         >
           {" "}
-          videomonitoramento
+          video-monitoramento em nuvem (VMS Cloud)
         </strong>
         , usando{" "}
         <strong

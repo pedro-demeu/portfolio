@@ -29,7 +29,7 @@ export default function AcademicSession() {
           marginBottom: "0.5rem",
           fontFamily: "monospace",
           textTransform: "uppercase",
-          background: "linear-gradient(90deg, #024059, #04BF8A)",
+          background: "linear-gradient(90deg, #3da2dc, #63b4e3)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}
@@ -39,7 +39,7 @@ export default function AcademicSession() {
       <Typography
         variant="h4"
         sx={{
-          fontSize: "2rem",
+          fontSize: "1.5rem",
           marginBottom: "1.5rem",
           textTransform: "uppercase",
           fontWeight: 700,
@@ -49,20 +49,24 @@ export default function AcademicSession() {
         Ensino Superior - Completo{" "}
       </Typography>
       <Typography
-        variant="body1"
+        variant="body2"
         sx={{
-          fontSize: "1rem",
+          fontSize: "0.8rem",
           color: "#ccc",
           marginBottom: "2rem",
         }}
       >
-        Ao longo do bacharel em engenharia de software, vivenciei projetos com
-        as linguagens de programação como Java, Python, JavaScript e C++, além
-        de frameworks como Spring Boot, Django e React. Também adquiri
-        experiência com bancos de dados relacionais (MySQL, PostgreSQL) e não
-        relacionais (MongoDB), e ferramentas de controle de versão como Git e
-        toda a parte de gestão de projetos, de ponta a ponta, sendo capaz de
-        atuar em qualquer etapa do processo de desenvolvimento.
+        Ao longo do Bacharel em <strong>Engenharia de Software</strong>,
+        vivenciei projetos com as linguagens de programação como{" "}
+        <strong>Java</strong>, <strong>Python</strong>,{" "}
+        <strong>JavaScript</strong> e <strong>C++</strong>, além de frameworks
+        como <strong>Spring Boot</strong>, <strong>Django</strong> e{" "}
+        <strong>React</strong>. Também adquiri experiência com bancos de dados
+        relacionais (<strong>MySQL</strong>, <strong>PostgreSQL</strong>) e não
+        relacionais (<strong>MongoDB</strong>), e ferramentas de controle de
+        versão como <strong>Git</strong> e toda a parte de gestão de projetos,
+        de ponta a ponta, sendo capaz de atuar em qualquer etapa do processo de
+        desenvolvimento.
       </Typography>
 
       <Box
@@ -181,6 +185,17 @@ export default function AcademicSession() {
           </CardContent>
         </Card>
       </Box>
+      <Typography
+        variant="h5"
+        sx={{
+          fontSize: "1rem",
+          marginBottom: "2rem",
+          textTransform: "uppercase",
+          fontWeight: 700,
+        }}
+      >
+        Cursos relevantes
+      </Typography>
       <Box
         sx={{
           mb: 4,

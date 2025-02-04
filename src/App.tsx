@@ -1,5 +1,10 @@
 import { Box, Container } from "@mui/material";
-import { HomeSession, ProjectsSession,AcademicSession } from "./components/sessions";
+import {
+  HomeSession,
+  ProjectsSession,
+  AcademicSession,
+  SkillsSession,
+} from "./components/sessions";
 
 function App() {
   return (
@@ -23,6 +28,7 @@ function App() {
         <HomeSession />
         <ProjectsSession />
         <AcademicSession />
+        <SkillsSession />
       </Container>
     </Box>
   );

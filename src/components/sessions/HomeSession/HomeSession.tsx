@@ -180,8 +180,8 @@ export default function HomeSession() {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
-          alignItems: 'center',
-          mt: 6
+          alignItems: "center",
+          mt: 6,
         }}
       >
         <Box
@@ -191,15 +191,17 @@ export default function HomeSession() {
             gap: "2rem",
           }}
         >
-          <Button
-            variant="outlined"
+          <Link
+            href="#projects"
             color="inherit"
             sx={{
               textTransform: "none",
+              textDecoration: "none",
+              cursor: "pointer",
             }}
           >
             Conhecer Mais
-          </Button>
+          </Link>
           <Button
             sx={{
               backgroundColor: "#f0f0f0",

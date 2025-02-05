@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, GlobalStyles } from "@mui/material";
 import {
   HomeSession,
   ProjectsSession,
@@ -10,30 +10,37 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <Box
-      sx={{
-        bgcolor: "#191919",
-        color: "#f0f0f0",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
-      <Container
+    <>
+      <GlobalStyles
+        styles={{
+          html: { scrollBehavior: "smooth" },
+        }}
+      />
+      <Box
         sx={{
-          height: "100%",
-          width: "100vw",
+          bgcolor: "#191919",
+          color: "#f0f0f0",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
         }}
       >
-        <ToastContainer />
-        <HomeSession />
-        <ProjectsSession />
-        <AcademicSession />
-        <SkillsSession />
-      </Container>
-      <FooterSession />
-    </Box>
+        <Container
+          sx={{
+            height: "100%",
+            width: "100vw",
+          }}
+        >
+          <ToastContainer />
+          <HomeSession />
+          <ProjectsSession />
+          <AcademicSession />
+          <SkillsSession />
+        </Container>
+        <FooterSession />
+      </Box>
+    </>
   );
 }
 

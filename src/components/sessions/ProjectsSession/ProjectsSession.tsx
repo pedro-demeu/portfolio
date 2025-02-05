@@ -5,6 +5,7 @@ export default function ProjectsSession() {
   const projects = mockData.projects;
   return (
     <Box
+      id="projects"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -111,12 +112,16 @@ export default function ProjectsSession() {
                 </Box>
               )}
               {project.active ? (
-                <Typography sx={{
-                  mt: 2,
-                  color: '#bc6c25',
-                  fontWeight: 'bold',
-                  textTransform: 'uppercase'
-                }}>Você está aqui</Typography>
+                <Typography
+                  sx={{
+                    mt: 2,
+                    color: "#bc6c25",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Você está aqui
+                </Typography>
               ) : (
                 <Box sx={{ textAlign: "center", marginTop: 2 }}>
                   <a

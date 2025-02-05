@@ -1,4 +1,4 @@
-import { Dialog, DialogTitle, DialogContent, Typography } from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, Typography, Box } from "@mui/material";
 
 export default function DegreeDialog({
   open,
@@ -37,7 +37,7 @@ export default function DegreeDialog({
       >
         Visualização de {name}
         <Typography
-            variant="body2"
+          variant="body2"
           sx={{
             color: "gray",
           }}
@@ -46,7 +46,26 @@ export default function DegreeDialog({
         </Typography>
       </DialogTitle>
       <DialogContent>
-        <img src={src} alt={alt} />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "80vh",
+            overflow: "hidden",
+          }}
+        >
+          <img
+            src={src}
+            alt={alt}
+            style={{
+              maxHeight: "100%",
+              maxWidth: "100%",
+              objectFit: "contain",
+              borderRadius: "8px",
+            }}
+          />
+        </Box>
       </DialogContent>
     </Dialog>
   );

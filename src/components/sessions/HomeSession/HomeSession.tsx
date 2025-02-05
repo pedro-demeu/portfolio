@@ -1,4 +1,13 @@
-import { Box, Button, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  IconButton,
+  Link,
+  Tooltip,
+  Typography,
+} from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { ContactMeDialog } from "../../dialog";
 import { useState } from "react";
 
@@ -171,11 +180,14 @@ export default function HomeSession() {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
+          alignItems: 'center',
+          mt: 6
         }}
       >
         <Box
           sx={{
             display: "flex",
+            alignItems: "center",
             gap: "2rem",
           }}
         >
@@ -202,13 +214,36 @@ export default function HomeSession() {
             Contate-me 👋
           </Button>
         </Box>
-        <Box sx={{}}>
-          <Button variant="text" size="small">
-            GITHUB
-          </Button>
-          <Button variant="text" size="small">
-            LINKEDIN
-          </Button>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "1rem",
+          }}
+        >
+          <Link
+            href="https://www.linkedin.com/in/pedro-demeu"
+            target="_blank"
+            rel="noopener"
+          >
+            <Tooltip title="LinkedIn">
+              <IconButton sx={{ color: "white" }}>
+                <LinkedInIcon fontSize="large" />
+              </IconButton>
+            </Tooltip>
+          </Link>
+          <Link
+            href="https://github.com/pedro-demeu"
+            target="_blank"
+            rel="noopener"
+          >
+            <Tooltip title="GitHub">
+              <IconButton sx={{ color: "white" }}>
+                <GitHubIcon fontSize="large" />
+              </IconButton>
+            </Tooltip>
+          </Link>
         </Box>
       </Box>
       <ContactMeDialog open={openContactMe} onClose={handleClose} />

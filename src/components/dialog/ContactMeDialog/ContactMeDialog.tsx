@@ -6,18 +6,18 @@ import {
   TextField,
   Button,
   Box,
-  Typography,
-  Link,
+  CircularProgress,
 } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
 const messageSchema = z.object({
-  name: z.string().min(4, "Name must be at least 4 characters long"),
-  email: z.string().email("Invalid email address"),
-  message: z.string().nonempty("Message is required"),
+  name: z.string().min(4, "O nome deve ter pelo menos 4 caracteres"),
+  email: z.string().email("E-mail inválido"),
+  message: z.string().min(10, "A mensagem deve ter pelo menos 10 caracteres"),
 });
 
 type MessageFormData = z.infer<typeof messageSchema>;
@@ -29,58 +29,56 @@ export default function ContactMeDialog({
   open: boolean;
   onClose: () => void;
 }) {
+  const [loading, setLoading] = useState(false);
+
   const {
     handleSubmit,
     control,
+    reset,
     formState: { errors, isValid },
   } = useForm<MessageFormData>({
-    mode: "onBlur",
+    mode: "onChange",
     resolver: zodResolver(messageSchema),
   });
 
-  const onSubmit = (data: MessageFormData) => {
-    console.log(data);
-    toast("Sua mensagem foi recebida com sucesso", {});
+  const handleClose = () => {
+    reset();
     onClose();
+  };
+
+  const onSubmit = async (data: MessageFormData) => {
+    setLoading(true);
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulando envio de mensagem
+      toast.success("Recebi sua mensagem! 😊");
+      handleClose();
+    } catch (error) {
+      toast.error("Erro ao enviar mensagem");
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <Dialog
       open={open}
-      onClose={onClose}
+      onClose={handleClose}
       maxWidth="sm"
       fullWidth
       sx={{
         "& .MuiPaper-root": {
-          background: "#333",
+          background: "#222",
           color: "white",
+          borderRadius: "10px",
+          padding: "1.5rem",
         },
       }}
     >
-      <DialogTitle>Vamos nos conectar? Me envie uma mensagem</DialogTitle>
+      <DialogTitle sx={{ textAlign: "center", fontWeight: "bold" }}>
+        Vamos nos conectar? Envie-me uma mensagem!
+      </DialogTitle>
       <DialogContent>
-        <Typography
-          variant="body1"
-          sx={{
-            mb: 1,
-            fontSize: "1.1rem",
-          }}
-        >
-          Sua mensagem será enviada para meu E-mail. Sinta-se livre para me
-          enviar também
-        </Typography>
-        <Link
-          href="mailto:pdemeu.pessoal@gmail.com"
-          sx={{
-            color: "inherit",
-            textDecoration: "none",
-            "&:hover": {
-              textDecoration: "underline",
-            },
-          }}
-        >
-          pdemeu.pessoal@gmail.com
-        </Link>
         <Box
           component="form"
           onSubmit={handleSubmit(onSubmit)}
@@ -88,121 +86,58 @@ export default function ContactMeDialog({
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
-            mt: "2rem",
+            mt: "1rem",
           }}
         >
-          <Controller
-            name="name"
-            control={control}
-            render={({ field }) => (
-              <TextField
-                {...field}
-                label="Name"
-                variant="outlined"
-                fullWidth
-                error={!!errors.name}
-                helperText={errors.name?.message}
-                sx={{
-                  "& .MuiInputBase-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "white",
-                  },
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: errors.name ? "red" : "white",
+          {["name", "email", "message"].map((field, index) => (
+            <Controller
+              key={field}
+              name={field as keyof MessageFormData}
+              control={control}
+              render={({ field: controllerField }) => (
+                <TextField
+                  {...controllerField}
+                  label={field.charAt(0).toUpperCase() + field.slice(1)}
+                  variant="outlined"
+                  fullWidth
+                  multiline={field === "message"}
+                  rows={field === "message" ? 4 : 1}
+                  autoFocus={index === 0}
+                  error={!!errors[field as keyof MessageFormData]}
+                  helperText={errors[field as keyof MessageFormData]?.message}
+                  sx={{
+                    "& .MuiInputBase-root": { color: "white" },
+                    "& .MuiInputLabel-root": { color: "white" },
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": { borderColor: "white" },
+                      "&:hover fieldset": { borderColor: "#bbb" },
+                      "&.Mui-focused fieldset": { borderColor: "primary.main" },
                     },
-                    "&:hover fieldset": {
-                      borderColor: errors.name ? "red" : "white",
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: errors.name ? "red" : "primary.main",
-                    },
-                  },
-                }}
-              />
-            )}
-          />
-          <Controller
-            name="email"
-            control={control}
-            render={({ field }) => (
-              <TextField
-                {...field}
-                label="Email"
-                variant="outlined"
-                fullWidth
-                error={!!errors.email}
-                helperText={errors.email?.message}
-                sx={{
-                  "& .MuiInputBase-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "white",
-                  },
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: errors.email ? "red" : "white",
-                    },
-                    "&:hover fieldset": {
-                      borderColor: errors.email ? "red" : "white",
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: errors.email ? "red" : "primary.main",
-                    },
-                  },
-                }}
-              />
-            )}
-          />
-          <Controller
-            name="message"
-            control={control}
-            render={({ field }) => (
-              <TextField
-                {...field}
-                label="Message"
-                variant="outlined"
-                fullWidth
-                multiline
-                rows={4}
-                error={!!errors.message}
-                helperText={errors.message?.message}
-                sx={{
-                  "& .MuiInputBase-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "white",
-                  },
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: errors.message ? "red" : "white",
-                    },
-                    "&:hover fieldset": {
-                      borderColor: errors.message ? "red" : "white",
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: errors.message ? "red" : "primary.main",
-                    },
-                  },
-                }}
-              />
-            )}
-          />
-          <DialogActions sx={{ my: 2, px: 3, gap: 4 }}>
-            <Button onClick={onClose} color="inherit">
+                  }}
+                />
+              )}
+            />
+          ))}
+          <DialogActions sx={{ mt: 2, justifyContent: "space-between" }}>
+            <Button onClick={handleClose} sx={{ color: "white" }}>
               Cancelar
             </Button>
             <Button
               type="submit"
               color="primary"
               variant="contained"
-              disabled={!isValid}
+              disabled={!isValid || loading}
+              startIcon={
+                loading ? <CircularProgress size={20} color="inherit" /> : null
+              }
+              sx={{
+                "&:disabled": {
+                  backgroundColor: "gray",
+                  color: "#ddd",
+                },
+              }}
             >
-              Enviar Mensagem
+              {loading ? "Enviando..." : "Enviar Mensagem"}
             </Button>
           </DialogActions>
         </Box>

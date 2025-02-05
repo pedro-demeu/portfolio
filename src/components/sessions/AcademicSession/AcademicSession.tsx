@@ -33,6 +33,7 @@ export default function AcademicSession() {
           background: "linear-gradient(90deg, #3da2dc, #63b4e3)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
+          textAlign: 'center'
         }}
       >
         Resultados Acadêmicos
@@ -40,14 +41,15 @@ export default function AcademicSession() {
       <Typography
         variant="h4"
         sx={{
-          fontSize: "1.5rem",
+          fontSize: "2rem",
           marginBottom: "1.5rem",
           textTransform: "uppercase",
           fontWeight: 700,
           mt: "1rem",
+          textAlign: 'center'
         }}
       >
-        Ensino Superior - Completo{" "}
+        Ensino Superior - Completo{" "}🎓
       </Typography>
       <Typography
         variant="body2"

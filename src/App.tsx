@@ -4,6 +4,7 @@ import {
   ProjectsSession,
   AcademicSession,
   SkillsSession,
+  FooterSession,
 } from "./components/sessions";
 import { ToastContainer } from "react-toastify";
 
@@ -17,7 +18,6 @@ function App() {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        pb: "12rem",
       }}
     >
       <Container
@@ -32,6 +32,7 @@ function App() {
         <AcademicSession />
         <SkillsSession />
       </Container>
+      <FooterSession />
     </Box>
   );
 }

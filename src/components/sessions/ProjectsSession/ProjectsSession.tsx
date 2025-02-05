@@ -65,7 +65,7 @@ export default function ProjectsSession() {
           <Card
             key={project.id}
             sx={{
-              backgroundColor: "#222",
+              backgroundColor: project.active ? "#dda15e" : "#222",
               color: "white",
               borderRadius: 2,
               ":hover": {
@@ -101,21 +101,32 @@ export default function ProjectsSession() {
                   />
                 ))}
               </Box>
-              <Box sx={{ textAlign: "center", marginTop: 2 }}>
-                <img
-                  src={project.imagem}
-                  alt={project.titulo}
-                  style={{ width: "100%", borderRadius: "8px" }}
-                />
-              </Box>
-              <Box sx={{ textAlign: "center", marginTop: 2 }}>
-                <a
-                  href={project.linkTo}
-                  style={{ color: "#90caf9", textDecoration: "none" }}
-                >
-                  Ver projeto
-                </a>
-              </Box>
+              {!project.active && (
+                <Box sx={{ textAlign: "center", marginTop: 2 }}>
+                  <img
+                    src={project.imagem}
+                    alt={project.titulo}
+                    style={{ width: "100%", borderRadius: "8px" }}
+                  />
+                </Box>
+              )}
+              {project.active ? (
+                <Typography sx={{
+                  mt: 2,
+                  color: '#bc6c25',
+                  fontWeight: 'bold',
+                  textTransform: 'uppercase'
+                }}>Você está aqui</Typography>
+              ) : (
+                <Box sx={{ textAlign: "center", marginTop: 2 }}>
+                  <a
+                    href={project.linkTo}
+                    style={{ color: "#90caf9", textDecoration: "none" }}
+                  >
+                    Ver projeto
+                  </a>
+                </Box>
+              )}
             </CardContent>
           </Card>
         ))}

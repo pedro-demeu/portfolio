@@ -7,9 +7,42 @@ import {
   Tooltip,
 } from "@mui/material";
 import unoparLogo from "../../../assets/unopar-logo.png";
+import diplomaImage from "../../../assets/diploma.png";
+import frontImage from "../../../assets/FRONTEND-certificate.png";
+import seImage from "../../../assets/SoftwareEngineer-certificate.png";
+
 import hackerRankLogo from "../../../assets/hackerrank_logo.jpeg";
+import { useState } from "react";
+import { DegreeDialog } from "../../dialog";
 
 export default function AcademicSession() {
+  const [openDegree, setOpenDegree] = useState(false);
+  const [openFront, setOpenFront] = useState(false);
+  const [openSoftEng, setOpenSoftEng] = useState(false);
+
+  const handleClose = () => {
+    setOpenDegree(false);
+  };
+
+  const handleOpen = () => {
+    setOpenDegree(true);
+  };
+
+  const handleCloseFront = () => {
+    setOpenFront(false);
+  };
+
+  const handleOpenFront = () => {
+    setOpenFront(true);
+  };
+
+  const handleCloseSoftEng = () => {
+    setOpenSoftEng(false);
+  };
+
+  const handleOpenSoftEng = () => {
+    setOpenSoftEng(true);
+  };
   return (
     <Box
       sx={{
@@ -33,7 +66,7 @@ export default function AcademicSession() {
           background: "linear-gradient(90deg, #3da2dc, #63b4e3)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
-          textAlign: 'center'
+          textAlign: "center",
         }}
       >
         Resultados Acadêmicos
@@ -46,10 +79,10 @@ export default function AcademicSession() {
           textTransform: "uppercase",
           fontWeight: 700,
           mt: "1rem",
-          textAlign: 'center'
+          textAlign: "center",
         }}
       >
-        Ensino Superior - Completo{" "}🎓
+        Ensino Superior - Completo 🎓
       </Typography>
       <Typography
         variant="body2"
@@ -180,6 +213,7 @@ export default function AcademicSession() {
                   sx={{
                     width: "50%",
                   }}
+                  onClick={handleOpen}
                 >
                   Visualizar Diploma
                 </Button>
@@ -307,6 +341,7 @@ export default function AcademicSession() {
                   sx={{
                     width: "50%",
                   }}
+                  onClick={handleOpenFront}
                 >
                   Visualizar Certificado
                 </Button>
@@ -423,6 +458,7 @@ export default function AcademicSession() {
                   sx={{
                     width: "50%",
                   }}
+                  onClick={handleOpenSoftEng}
                 >
                   Visualizar Certificado
                 </Button>
@@ -431,6 +467,27 @@ export default function AcademicSession() {
           </CardContent>
         </Card>
       </Box>
+      <DegreeDialog
+        open={openDegree}
+        name="Diploma"
+        onClose={handleClose}
+        src={diplomaImage}
+        alt="Diploma"
+      />
+      <DegreeDialog
+        open={openFront}
+        name="Certificado"
+        onClose={handleCloseFront}
+        src={frontImage}
+        alt="Certificado Frontend"
+      />
+      <DegreeDialog
+        open={openSoftEng}
+        name="Certificado"
+        onClose={handleCloseSoftEng}
+        src={seImage}
+        alt="Certificado Software Engineer"
+      />
     </Box>
   );
 }

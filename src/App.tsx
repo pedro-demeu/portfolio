@@ -5,6 +5,7 @@ import {
   AcademicSession,
   SkillsSession,
 } from "./components/sessions";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           width: "100vw",
         }}
       >
+        <ToastContainer />
         <HomeSession />
         <ProjectsSession />
         <AcademicSession />

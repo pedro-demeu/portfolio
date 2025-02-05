@@ -1,6 +1,16 @@
 import { Box, Button, Typography } from "@mui/material";
+import { ContactMeDialog } from "../../dialog";
+import { useState } from "react";
 
 export default function HomeSession() {
+  const [openContactMe, setOpenContactMe] = useState(false);
+
+  const handleOpen = () => {
+    setOpenContactMe(true);
+  };
+  const handleClose = () => {
+    setOpenContactMe(false);
+  };
   return (
     <Box
       sx={{
@@ -84,7 +94,8 @@ export default function HomeSession() {
             color: "#DDD",
           }}
         >
-        {" "}engenheiro de software
+          {" "}
+          engenheiro de software
         </strong>{" "}
         com{" "}
         <strong
@@ -186,6 +197,7 @@ export default function HomeSession() {
               },
               textTransform: "none",
             }}
+            onClick={handleOpen}
           >
             Contate-me 👋
           </Button>
@@ -199,6 +211,7 @@ export default function HomeSession() {
           </Button>
         </Box>
       </Box>
+      <ContactMeDialog open={openContactMe} onClose={handleClose} />
     </Box>
   );
 }

@@ -120,12 +120,13 @@ export default function SkillsSession() {
         variant="h4"
         sx={{
           fontSize: "1rem",
-          marginBottom: "0.5rem",
+          marginBottom: "2rem",
           fontFamily: "monospace",
           textTransform: "uppercase",
           background: "linear-gradient(90deg, #3da2dc, #63b4e3)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
+          textAlign: 'center'
         }}
       >
         Hard Skills
@@ -133,7 +134,7 @@ export default function SkillsSession() {
       <Typography
         variant="h4"
         sx={{
-          fontSize: "1.5rem",
+          fontSize: "1rem",
           marginBottom: "1.5rem",
           textTransform: "uppercase",
           fontWeight: 700,

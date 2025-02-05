@@ -20,6 +20,7 @@ export default function AcademicSession() {
         margin: "0 auto",
         height: "100vh",
         textAlign: "left",
+        mb: 6,
       }}
     >
       <Typography
@@ -71,7 +72,7 @@ export default function AcademicSession() {
 
       <Box
         sx={{
-          mb: 4,
+          mb: 6,
         }}
       >
         <Card

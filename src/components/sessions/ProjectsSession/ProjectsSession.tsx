@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography, Box, Chip } from "@mui/material";
+import { Card, CardContent, Typography, Box, Chip, Container } from "@mui/material";
 import mockData from "./mock";
 
 export default function ProjectsSession() {
@@ -11,12 +11,13 @@ export default function ProjectsSession() {
         flexDirection: "column",
         padding: "2rem",
         width: "100%",
-        maxWidth: "800px",
         margin: "0 auto",
-        height: "100vh",
+        height: "100%",
         textAlign: "center",
+        bgcolor: "#191919",
       }}
     >
+      <Container>
       <Typography
         variant="h4"
         sx={{
@@ -136,6 +137,7 @@ export default function ProjectsSession() {
           </Card>
         ))}
       </Box>
+      </Container>
     </Box>
   );
 }

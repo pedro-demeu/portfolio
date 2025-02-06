@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Tooltip,
+  Container,
 } from "@mui/material";
 import unoparLogo from "../../../assets/unopar-logo.png";
 import diplomaImage from "../../../assets/diploma.png";
@@ -49,13 +50,13 @@ export default function AcademicSession() {
         padding: "2rem",
         paddingTop: "10rem",
         width: "100%",
-        maxWidth: "800px",
         margin: "0 auto",
-        height: "100vh",
+        height: "100%",
         textAlign: "left",
-        mb: 6,
+        bgcolor: "#191919",
       }}
     >
+      <Container>
       <Typography
         variant="h4"
         sx={{
@@ -488,6 +489,7 @@ export default function AcademicSession() {
         src={seImage}
         alt="Certificado Software Engineer"
       />
+      </Container>
     </Box>
   );
 }

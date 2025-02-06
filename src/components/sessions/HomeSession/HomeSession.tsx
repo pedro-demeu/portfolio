@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Container,
   IconButton,
   Link,
   Tooltip,
@@ -28,11 +29,12 @@ export default function HomeSession() {
         justifyContent: "center",
         padding: "2rem",
         width: "100%",
-        maxWidth: "800px",
+        bgcolor: "#191919",
         margin: "0 auto",
         height: "100vh",
       }}
     >
+      <Container>
       <Box
         sx={{
           display: "flex",
@@ -225,7 +227,7 @@ export default function HomeSession() {
           }}
         >
           <Link
-            href="https://www.linkedin.com/in/pedro-demeu"
+            href="https://www.linkedin.com/in/pdemeu"
             target="_blank"
             rel="noopener"
           >
@@ -249,6 +251,7 @@ export default function HomeSession() {
         </Box>
       </Box>
       <ContactMeDialog open={openContactMe} onClose={handleClose} />
+    </Container>
     </Box>
   );
 }

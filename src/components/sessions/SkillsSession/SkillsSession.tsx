@@ -1,4 +1,4 @@
-import { Box, Chip, Tooltip, Typography } from "@mui/material";
+import { Box, Chip, Container, Tooltip, Typography } from "@mui/material";
 
 const technologies = [
   {
@@ -188,12 +188,15 @@ export default function SkillsSession() {
         padding: "2rem",
         paddingTop: "10rem",
         width: "100%",
-        maxWidth: "800px",
         margin: "0 auto",
         height: "100vh",
         textAlign: "left",
+        color: "#f0f0f0",
+        bgcolor: "#191919",
+
       }}
     >
+      <Container>
       <Typography
         variant="h4"
         sx={{
@@ -247,6 +250,7 @@ export default function SkillsSession() {
           </Tooltip>
         ))}
       </Box>
+      </Container>
     </Box>
   );
 }

@@ -47,6 +47,10 @@ export default function ContactMeDialog({
   };
 
   const onSubmit = async (data: MessageFormData) => {
+    console.log({
+      data,
+    });
+
     setLoading(true);
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulando envio de mensagem

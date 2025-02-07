@@ -219,23 +219,39 @@ export default function HomeSession() {
               gap: "2rem",
             }}
           >
-            <Link
-              href="#work-timeline"
-              color="inherit"
+            <Box
               sx={{
-                textTransform: "none",
-                textDecoration: "none",
-                cursor: "pointer",
+              background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+              borderRadius: "5px",
+              padding: "0.5rem 1rem",
+              cursor: "pointer",
+              transition: "transform 0.3s ease-in-out",
+              animation: "pulse 1.5s infinite",
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+              "@keyframes pulse": {
+                "0%": { transform: "scale(1)" },
+                "50%": { transform: "scale(1.1)" },
+                "100%": { transform: "scale(1)" },
+              },
               }}
+              onClick={() => window.location.href = "#work-timeline"}
             >
+              <Typography
+              sx={{
+                color: "#FFF",
+                fontWeight: 500,
+              }}
+              >
               Conhecer Mais
-            </Link>
+              </Typography>
+            </Box>
+
             <Button
               sx={{
-                backgroundColor: "#f0f0f0",
-                color: "#191919",
+                color: "#FFF",
                 "&:hover": {
-                  backgroundColor: "#e0e0e0",
                 },
                 textTransform: "none",
               }}

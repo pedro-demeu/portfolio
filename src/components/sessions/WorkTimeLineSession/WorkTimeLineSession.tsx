@@ -98,7 +98,7 @@ export default function WorkTimeLineSession() {
           Nessa sessão, compartilho minhas{" "}
           <strong>experiências profissionais</strong> e trajetória no{" "}
           <strong>mercado de trabalho</strong>, destacando minhas{" "}
-          <strong>contribuições</strong> e<strong>aprendizados</strong> ao longo
+          <strong>contribuições</strong> e <strong>aprendizados</strong> ao longo
           dos anos.
         </Typography>
         <Timeline position="alternate">

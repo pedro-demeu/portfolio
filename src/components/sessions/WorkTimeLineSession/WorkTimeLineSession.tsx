@@ -50,6 +50,7 @@ export default function WorkTimeLineSession() {
         margin: "0 auto",
         textAlign: "left",
         color: "#f0f0f0",
+        pb: 10,
         bgcolor: "#191919",
       }}
     >
@@ -98,8 +99,8 @@ export default function WorkTimeLineSession() {
           Nessa sessão, compartilho minhas{" "}
           <strong>experiências profissionais</strong> e trajetória no{" "}
           <strong>mercado de trabalho</strong>, destacando minhas{" "}
-          <strong>contribuições</strong> e <strong>aprendizados</strong> ao longo
-          dos anos.
+          <strong>contribuições</strong> e <strong>aprendizados</strong> ao
+          longo dos anos.
         </Typography>
         <Timeline position="alternate">
           {workExperiences.map((experience, index) => (
@@ -113,13 +114,17 @@ export default function WorkTimeLineSession() {
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineDot
-                  sx={(theme) => ({ bgcolor: theme.palette.primary.main })}
+                  sx={{
+                    background: "linear-gradient(45deg, #ff8a00, #e52e71)",
+                  }}
                 >
                   <WorkIcon sx={{ color: "#fff" }} fontSize="small" />
                 </TimelineDot>
                 {index !== workExperiences.length - 1 && (
                   <TimelineConnector
-                    sx={(theme) => ({ bgcolor: theme.palette.primary.main })}
+                    sx={{
+                      background: "linear-gradient(45deg, #ff8a00, #e52e71)",
+                    }}
                   />
                 )}
               </TimelineSeparator>

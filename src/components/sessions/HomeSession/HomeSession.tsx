@@ -221,8 +221,8 @@ export default function HomeSession() {
           >
             <Box
               sx={{
-              background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-              borderRadius: "5px",
+                background: "linear-gradient(90deg, #ff8a00, #e52e71)",
+                borderRadius: "5px",
               padding: "0.5rem 1rem",
               cursor: "pointer",
               transition: "transform 0.3s ease-in-out",

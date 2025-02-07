@@ -48,7 +48,7 @@ export default function AcademicSession() {
     <Box
       sx={{
         padding: "2rem",
-        paddingTop: "10rem",
+        paddingTop: "4rem",
         width: "100%",
         margin: "0 auto",
         height: "100%",
@@ -68,7 +68,7 @@ export default function AcademicSession() {
             marginBottom: "0.5rem",
             fontFamily: "monospace",
             textTransform: "uppercase",
-            background: "linear-gradient(90deg, #3da2dc, #63b4e3)",
+            background: "linear-gradient(90deg, #ff8a00, #e52e71)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             textAlign: "center",
@@ -94,7 +94,7 @@ export default function AcademicSession() {
           sx={{
             fontSize: "0.8rem",
             color: "#ccc",
-            marginBottom: "2rem",
+            marginBottom: "4rem",
           }}
         >
           Ao longo do Bacharel em <strong>Engenharia de Software</strong>,

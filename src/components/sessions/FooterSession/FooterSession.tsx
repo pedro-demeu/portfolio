@@ -19,10 +19,10 @@ export default function FooterSession() {
       }}
     >
       <Typography variant="h6" sx={{ mb: 2 }}>
-        Gostou do perfil? Vamos nos conectar!
+        Gostou do perfil? Vamos nos <strong>conectar!</strong>
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Você será bem-vindo em minhas redes
+        Você será bem-vindo(a) em minhas redes
       </Typography>
       <Box
         sx={{ display: "flex", justifyContent: "center", gap: "1rem", mb: 4 }}

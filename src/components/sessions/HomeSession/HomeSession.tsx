@@ -220,7 +220,7 @@ export default function HomeSession() {
             }}
           >
             <Link
-              href="#projects"
+              href="#work-timeline"
               color="inherit"
               sx={{
                 textTransform: "none",

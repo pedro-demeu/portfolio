@@ -5,6 +5,7 @@ import {
   AcademicSession,
   SkillsSession,
   FooterSession,
+  WorkTimeLineSession,
 } from "./components/sessions";
 import { ToastContainer } from "react-toastify";
 import PayMeACoffe from "./components/sessions/PayMeACoffe/PayMeACoffe";
@@ -23,6 +24,7 @@ function App() {
         />
         <ToastContainer />
         <HomeSession />
+        <WorkTimeLineSession />
         <ProjectsSession />
         <AcademicSession />
         <SkillsSession />

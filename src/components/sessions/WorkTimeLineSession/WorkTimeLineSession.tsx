@@ -75,13 +75,13 @@ export default function WorkTimeLineSession() {
           sx={{
             textAlign: "center",
             fontSize: "2rem",
-            marginBottom: "1.5rem",
+            marginBottom: "2rem",
             textTransform: "uppercase",
             fontWeight: 700,
             mt: "0.5rem",
           }}
         >
-          Carreira
+          Profissional
         </Typography>
         <Typography
           variant="body1"

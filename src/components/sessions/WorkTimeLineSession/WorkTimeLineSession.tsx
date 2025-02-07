@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Chip, Container, Typography } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -16,6 +16,18 @@ export default function WorkTimeLineSession() {
       role: "Frontend Software Engineer (Pleno)",
       description:
         "Na Segware, contribuo significativamente para o desenvolvimento de novas funcionalidades e aprimoramento dos produtos da empresa, impactando milhares de clientes. Mantenho o Frontend do Produto VMS Cloud, e ajudo o mundo a ser um lugar mais seguro.",
+      skills: [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "CSS",
+        "MUI",
+        "CYPRESS",
+        "Docker",
+        "Java",
+        "MongoDB",
+        "PostgreSQL",
+      ],
     },
     {
       year: "2020 - 2021",
@@ -23,6 +35,15 @@ export default function WorkTimeLineSession() {
       role: "FullStack Software Engineer (Part-time)",
       description:
         "Na BlockIT, uma software house, tive um papel ativo e essencial no desenvolvimento de software. Contribuí significativamente para a melhoria contínua de softwares existentes, garantindo uma experiência otimizada para os usuários. Além disso, participei ativamente da criação e implementação de novos projetos inovadores, incluindo ERPs, CRMs e Landing Pages.",
+      skills: [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Express",
+        "JavaScript",
+        "Bootstrap",
+        "JQuery",
+      ],
     },
     {
       year: "2020 - 2021",
@@ -30,6 +51,15 @@ export default function WorkTimeLineSession() {
       role: "Suporte Técnico | Python | AngularJS | Redes | Atendimento ao Cliente | Administrativo",
       description:
         "Trabalhei como Suporte Técnico na Intera Internet, onde fui responsável pelo monitoramento de clientes e suporte técnico. Além das habilidades técnicas, desenvolvi minha capacidade de atendimento ao cliente e trabalhei bastante minhas soft skills. Meu gestor disponibilizava acesso à plataforma Alura como benefício, o que me permitiu aprofundar meus conhecimentos em tecnologia, assistindo a mais de 100 horas de cursos durante meu período na empresa. Essa experiência foi fundamental para meu crescimento profissional, combinando aprendizado prático e teórico.",
+      skills: [
+        "Python",
+        "AngularJS",
+        "Networking",
+        "Customer Service",
+        "Administrative",
+        "React",
+        "ERP"
+      ],
     },
     {
       year: "2016 - 2018",
@@ -37,6 +67,7 @@ export default function WorkTimeLineSession() {
       role: "Trainee Software Developer | Java Swing - JavaFX - PHP - JQuery - Bootstrap",
       description:
         "Desenvolvi um sistema de controle de acesso e monitoramento para a segurança de condomínios, utilizando Java Swing para a interface desktop e PostgreSQL para gerenciar cadastros e registros de entrada/saída. O sistema gerava relatórios diários para a equipe de segurança e enviava notificações por e-mail e SMS em caso de incidentes. Esse projeto me proporcionou experiência em desenvolvimento de aplicações desktop, design de banco de dados e lógica de programação.",
+      skills: ["Java Swing", "JavaFX", "PHP", "JQuery", "Bootstrap", "HTML", "CSS"],
     },
   ];
 
@@ -148,6 +179,30 @@ export default function WorkTimeLineSession() {
                 >
                   {experience.description}
                 </Typography>
+                <Typography sx={{
+                  mt: 4,
+                }}>Competências</Typography>
+                <br />
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "start",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                    gap: "0.5rem",
+                  }}
+                >
+                  {experience.skills?.map((skill, skillIndex) => (
+                    <Chip
+                      key={skillIndex}
+                      label={skill}
+                      sx={{
+                        background: "linear-gradient(45deg, #ff8a00, #e52e71)",
+                        color: "#fff",
+                      }}
+                    />
+                  ))}
+                </Box>
               </TimelineContent>
             </TimelineItem>
           ))}

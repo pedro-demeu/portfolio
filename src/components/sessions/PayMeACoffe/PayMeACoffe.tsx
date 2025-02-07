@@ -25,7 +25,7 @@ export default function PayMeACoffee() {
           WebkitTextFillColor: "transparent",
         }}
       >
-        Apoie-me pagando um café 
+        Área do café
       </Typography>
       <Typography variant="h2" mb={4}>☕</Typography>
       <Typography variant="body1" sx={{ mb: 4, color: "#555", maxWidth: '450px', textAlign: 'justify', margin: '0 auto' }}>

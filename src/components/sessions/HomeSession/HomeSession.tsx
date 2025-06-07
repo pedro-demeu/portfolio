@@ -10,17 +10,17 @@ import {
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { ContactMeDialog } from "../../dialog";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function HomeSession() {
   const [openContactMe, setOpenContactMe] = useState(false);
 
-  const handleOpen = () => {
+  const handleOpen = React.useCallback(() => {
     setOpenContactMe(true);
-  };
-  const handleClose = () => {
+  }, []);
+  const handleClose = React.useCallback(() => {
     setOpenContactMe(false);
-  };
+  }, []);
   return (
     <Box
       sx={{
@@ -68,8 +68,9 @@ export default function HomeSession() {
                 color: "#ccc",
               }}
             >
-              Desenvolvedor Full-Stack | Engenheiro de Software
+              Frontend Engineer com visão Fullstack | Bacharel em Engenharia de Software
             </Typography>
+
           </Box>
           <Box
             sx={{
@@ -93,8 +94,8 @@ export default function HomeSession() {
               <Box
                 sx={(theme) => ({
                   position: "absolute",
-                  bottom: 10, // Ajuste a posição para ficar mais próxima
-                  right: 70, // Ajuste a posição para ficar mais próxima
+                  bottom: 10,
+                  right: 70,
                   height: 20,
                   width: 20,
                   bgcolor: theme.palette.success.light,
@@ -124,85 +125,49 @@ export default function HomeSession() {
             mb: "1rem",
           }}
         >
-          Sou um
-          <strong
-            style={{
-              color: "#DDD",
-            }}
-          >
-            {" "}
-            engenheiro de software
-          </strong>{" "}
-          com{" "}
-          <strong
-            style={{
-              color: "#DDD",
-            }}
-          >
-            5 anos de experiência
-          </strong>
-          , que transforma ideias em{" "}
-          <strong
-            style={{
-              color: "#DDD",
-            }}
-          >
-            produtos digitais incríveis.
-          </strong>{" "}
-          Meu trabalho vai além de escrever código: eu entendo o seu negócio e
-          construo{" "}
-          <strong
-            style={{
-              color: "#DDD",
-            }}
-          >
-            interfaces simples e eficientes
-          </strong>{" "}
-          que resolvem problemas reais do seu negócio.
+          Desenvolvedor de Software com mais de{" "}
+          <strong style={{ color: "#DDD" }}>5 anos de experiência</strong>, impactando milhares de pessoas todos os dias.
         </Typography>
         <Typography
+          variant="body1"
           sx={{
             fontSize: "1rem",
             color: "#aaa",
-            mb: "2rem",
+            mb: "1rem",
           }}
         >
-          Atualmente, estou atuando como{" "}
-          <strong
-            style={{
-              color: "#DDD",
-            }}
-          >
-            desenvolvedor frontend
-          </strong>{" "}
-          em um produto de
-          <strong
-            style={{
-              color: "#DDD",
-            }}
-          >
-            {" "}
-            video-monitoramento em nuvem (VMS Cloud)
-          </strong>
-          , usando{" "}
-          <strong
-            style={{
-              color: "#DDD",
-            }}
-          >
-            React
-          </strong>{" "}
-          e{" "}
-          <strong
-            style={{
-              color: "#DDD",
-            }}
-          >
-            TypeScript
-          </strong>{" "}
-          para entregar soluções que funcionam bem e geram valor para os
-          clientes.
+          Hoje atuo como <strong style={{ color: "#DDD" }}>Frontend Software Engineer</strong>, mantendo em produção uma{" "}
+          <strong style={{ color: "#DDD" }}>plataforma de vídeo-monitoramento em nuvem (VMS Cloud)</strong>.
         </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            fontSize: "1rem",
+            color: "#aaa",
+            mb: "1rem",
+          }}
+        >
+          Tenho muita bagagem com <strong style={{ color: "#DDD" }}>Processos de desenvolvimento, Testes Automatizados, Code Review</strong>, além de{" "}
+          <strong style={{ color: "#DDD" }}>experiência em Devops CI/CD, Integrações de API RESTful</strong> e uma{" "}
+          <strong style={{ color: "#DDD" }}>visão Full-Stack</strong> com backend em{" "}
+          <strong style={{ color: "#DDD" }}>Node.js, NestJS, Java Spring Boot e Django</strong>.
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "0.85rem",
+            fontStyle: 'italic',
+            color: "#aaa",
+            mb: "2rem",
+            mt: 6,
+          }}
+        >
+          Stack principal:{" "}
+          <strong style={{ color: "#DDD" }}>
+            JavaScript • TypeScript • ReactJS • React Native • Node.js • Java Spring Boot • Jest • Jira • Bitbucket • Video.js • SWR • React Testing Library • Cypress • NestJS
+          </strong>
+        </Typography>
+
+
         <Box
           sx={{
             display: "flex",
@@ -223,28 +188,28 @@ export default function HomeSession() {
               sx={{
                 background: "linear-gradient(90deg, #ff8a00, #e52e71)",
                 borderRadius: "5px",
-              padding: "0.5rem 1rem",
-              cursor: "pointer",
-              transition: "transform 0.3s ease-in-out",
-              animation: "pulse 1.5s infinite",
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-              "@keyframes pulse": {
-                "0%": { transform: "scale(1)" },
-                "50%": { transform: "scale(1.1)" },
-                "100%": { transform: "scale(1)" },
-              },
+                padding: "0.5rem 1rem",
+                cursor: "pointer",
+                transition: "transform 0.3s ease-in-out",
+                animation: "pulse 1.5s infinite",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                },
+                "@keyframes pulse": {
+                  "0%": { transform: "scale(1)" },
+                  "50%": { transform: "scale(1.1)" },
+                  "100%": { transform: "scale(1)" },
+                },
               }}
               onClick={() => window.location.href = "#work-timeline"}
             >
               <Typography
-              sx={{
-                color: "#FFF",
-                fontWeight: 500,
-              }}
+                sx={{
+                  color: "#FFF",
+                  fontWeight: 500,
+                }}
               >
-              Conhecer Mais
+                Conhecer Mais
               </Typography>
             </Box>
 

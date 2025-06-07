@@ -139,6 +139,7 @@ export default function ProjectsSession() {
                   <Box sx={{ textAlign: "center", marginTop: 2 }}>
                     <a
                       href={project.linkTo}
+                      target="_blank"
                       style={{ color: "#90caf9", textDecoration: "none" }}
                     >
                       Ver projeto

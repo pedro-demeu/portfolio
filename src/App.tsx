@@ -8,7 +8,6 @@ import {
   WorkTimeLineSession,
 } from "./components/sessions";
 import { ToastContainer } from "react-toastify";
-import PayMeACoffe from "./components/sessions/PayMeACoffe/PayMeACoffe";
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
         <ProjectsSession />
         <AcademicSession />
         <SkillsSession />
-        <PayMeACoffe />
       </Box>
       <FooterSession />
     </>

@@ -199,8 +199,8 @@ export default function SkillsSession() {
         margin: "0 auto",
         height: "100vh",
         textAlign: "left",
-        color: "#f0f0f0",
-        bgcolor: "#191919",
+        color: "#222",
+        bgcolor: "#f0f0f0",
       }}
     >
       <Container>
@@ -271,9 +271,10 @@ export default function SkillsSession() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  border: "1px solid #424242",
+                  border: "1px solid linear-gradient(90deg, #ff8a00, #e52e71)",
                   fontFamily: "sans-serif",
                   borderRadius: "8px",
+                  bgcolor: '#424242',
                   color: "white",
                   padding: "0.5rem",
                   transition: "transform 0.3s ease, background-color 0.3s ease",

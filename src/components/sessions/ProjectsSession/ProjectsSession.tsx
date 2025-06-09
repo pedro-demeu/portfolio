@@ -5,8 +5,10 @@ import {
   Box,
   Chip,
   Container,
+  IconButton,
 } from "@mui/material";
 import mockData from "./mock";
+import ecommerceImage from '../../../assets/demo-ecommerce.png'
 
 export default function ProjectsSession() {
   const projects = mockData.projects;
@@ -70,7 +72,7 @@ export default function ProjectsSession() {
         <Box
           sx={{
             display: "grid",
-            mt: 10,
+            my: 5,
             gap: 3,
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           }}
@@ -79,7 +81,7 @@ export default function ProjectsSession() {
             <Card
               key={project.id}
               sx={{
-                backgroundColor: project.active ? "#dda15e" : "#222",
+                backgroundColor: project.active ? "#2E2E2E" : "#222",
                 color: "white",
                 borderRadius: 2,
                 ":hover": {
@@ -90,50 +92,57 @@ export default function ProjectsSession() {
                 },
               }}
             >
-              <CardContent>
+              <CardContent sx={{
+                flex: '1 1 auto',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '100%',
+              }}>
                 <Typography
                   variant="h6"
                   sx={{
-                    marginBottom: 2,
+                    marginY: 2.5,
+                    textAlign: 'center',
                     fontWeight: 700,
+                    fontSize: 20,
+                    textTransform: 'uppercase'
                   }}
                 >
                   {project.titulo}
                 </Typography>
+                {!project.active && (
+                  <img
+                    src={project.imagem}
+                    alt={project.titulo}
+                    style={{ width: "100%", borderRadius: "8px" }}
+                  />
+                )}
                 <Typography
                   variant="body2"
-                  sx={{ marginBottom: 2, color: "#ccc", textAlign: "justify" }}
+                  sx={{ marginBottom: 2, color: "#ccc", textAlign: "justify", fontSize: 16, px: 2, mt: 2 }}
                 >
                   {project.descricao}
                 </Typography>
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-                  {project.tecnologias.map((tecnologia) => (
+                <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: 'center', gap: 1, mt: 2, mb: 1, }}>
+                  {project.tecnologias.map((tecnologia, index) => (
                     <Chip
-                      key={tecnologia.id}
+                      key={project.id + tecnologia.name + index}
                       label={tecnologia.name}
-                      sx={{ backgroundColor: "#ddd", color: "dark" }}
+                      sx={{ backgroundColor: "#ddd", color: "dark", height: 18, fontSize: 12 }}
                     />
                   ))}
-                </Box>
-                {!project.active && (
-                  <Box sx={{ textAlign: "center", marginTop: 2 }}>
-                    <img
-                      src={project.imagem}
-                      alt={project.titulo}
-                      style={{ width: "100%", borderRadius: "8px" }}
-                    />
-                  </Box>
-                )}
+                </Box>                
                 {project.active ? (
                   <Typography
                     sx={{
-                      mt: 2,
-                      color: "#bc6c25",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
+                      textAlign: 'center',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                     }}
                   >
-                    Você está aqui
+                    <Typography mt={1} mr={1} variant="body1" textTransform="uppercase" color="white">Você está aqui</Typography><IconButton>🎉</IconButton>
                   </Typography>
                 ) : (
                   <Box sx={{ textAlign: "center", marginTop: 2 }}>

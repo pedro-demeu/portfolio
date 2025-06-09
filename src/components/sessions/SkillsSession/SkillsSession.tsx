@@ -239,7 +239,7 @@ export default function SkillsSession() {
             textTransform: "none",
             fontWeight: 400,
             textAlign: "justify",
-            color: "#b0b0b0",
+            color: "#222",
             maxWidth: "600px",
             margin: "0 auto",
             pb: 6,
@@ -263,7 +263,7 @@ export default function SkillsSession() {
           }}
         >
           {technologies.map((tech) => (
-            <Tooltip title={tech.description}>
+            <Tooltip title={tech.description} placement="top">
               <Chip
                 key={tech.id}
                 label={tech.name}

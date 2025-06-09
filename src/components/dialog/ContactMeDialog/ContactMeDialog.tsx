@@ -37,7 +37,7 @@ export default function ContactMeDialog({
     reset,
     formState: { errors, isValid },
   } = useForm<MessageFormData>({
-    mode: "onChange",
+    mode: "onBlur",
     resolver: zodResolver(messageSchema),
   });
 
@@ -55,6 +55,7 @@ export default function ContactMeDialog({
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulando envio de mensagem
       toast.success("Recebi sua mensagem! 😊");
+      reset();
       handleClose();
     } catch (error) {
       toast.error("Erro ao enviar mensagem");
@@ -79,8 +80,8 @@ export default function ContactMeDialog({
         },
       }}
     >
-      <DialogTitle sx={{ textAlign: "center", fontWeight: "bold" }}>
-        Vamos nos conectar? Envie-me uma mensagem!
+      <DialogTitle sx={{ textAlign: "left", fontWeight: "bold" }}>
+        Vamos nos conectar? <br /> Me envie uma mensagem!
       </DialogTitle>
       <DialogContent>
         <Box
@@ -92,8 +93,9 @@ export default function ContactMeDialog({
             gap: "1rem",
             mt: "1rem",
           }}
+          autoComplete="off"
         >
-          {["name", "email", "message"].map((field, index) => (
+          {["name", "email", "message"].map((field) => (
             <Controller
               key={field}
               name={field as keyof MessageFormData}
@@ -106,16 +108,15 @@ export default function ContactMeDialog({
                   fullWidth
                   multiline={field === "message"}
                   rows={field === "message" ? 4 : 1}
-                  autoFocus={index === 0}
                   error={!!errors[field as keyof MessageFormData]}
                   helperText={errors[field as keyof MessageFormData]?.message}
                   sx={{
-                    "& .MuiInputBase-root": { color: "white" },
-                    "& .MuiInputLabel-root": { color: "white" },
+                    "& .MuiInputBase-root": { color: 'white' },
+                    "& .MuiInputLabel-root": { color: errors[field as keyof MessageFormData] ? "error.main" : 'white' },
                     "& .MuiOutlinedInput-root": {
-                      "& fieldset": { borderColor: "white" },
-                      "&:hover fieldset": { borderColor: "#bbb" },
-                      "&.Mui-focused fieldset": { borderColor: "primary.main" },
+                      "& fieldset": { borderColor: errors[field as keyof MessageFormData] ? "error.main" : 'white' },
+                      "&:hover fieldset": { borderColor: errors[field as keyof MessageFormData] ? "error.main" : '#bbb' },
+                      "&.Mui-focused fieldset": { borderColor: errors[field as keyof MessageFormData] ? "error.main" : 'primary.main' },
                     },
                   }}
                 />

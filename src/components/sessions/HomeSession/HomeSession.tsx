@@ -68,7 +68,7 @@ export default function HomeSession() {
                 color: "#ccc",
               }}
             >
-              Frontend Engineer com visão Fullstack | Bacharel em Engenharia de Software
+              Frontend Engineer | Bacharel em Engenharia de Software
             </Typography>
 
           </Box>

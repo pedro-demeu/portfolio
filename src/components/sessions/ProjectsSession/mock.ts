@@ -17,6 +17,7 @@ interface ProjetosData {
   projects: Projeto[];
 }
 
+
 const mockData: ProjetosData = {
   projects: [
     {
@@ -28,8 +29,9 @@ const mockData: ProjetosData = {
         { id: 1, name: "React" },
         { id: 2, name: "TypeScript" },
         { id: 3, name: "Material-UI" },
-        { id: 3, name: "Jest" },
-        { id: 3, name: "VideoJS" },
+        { id: 4, name: "Jest" },
+        { id: 5, name: "VideoJS" },
+        { id: 6, name: "Java Springboot" },
       ],
       imagem: "https://segware.com/wp-content/uploads/2024/05/vms-cloud-hero-1536x958.webp",
       linkTo: "https://segware.com/vms/",
@@ -45,8 +47,9 @@ const mockData: ProjetosData = {
         { id: 2, name: "TypeScript" },
         { id: 4, name: "TailwindCSS" },
         { id: 5, name: "Jest/Vitest" },
+        { id: 6, name: "Javascript" },
       ],
-      imagem: '', // "https://github.com/pedro-demeu/capputeeno-ecommerce-nextjs/blob/master/public/demo.png",
+      imagem: "https://raw.githubusercontent.com/pedro-demeu/capputeeno-ecommerce-nextjs/master/public/demo.png",
       linkTo: "https://github.com/pedro-demeu/capputeeno-ecommerce-nextjs",
       active: false
     },
@@ -72,9 +75,9 @@ const mockData: ProjetosData = {
       tecnologias: [
         { id: 1, name: "Node.JS" },
         { id: 2, name: "Javascript" },
-        { id: 6, name: "FFMPEG" },
+        { id: 3, name: "FFMPEG" },
       ],
-      imagem: '', // "https://github.com/pedro-demeu/learn-ffmpeg-with-nodejs/blob/main/image.png",
+      imagem: "https://raw.githubusercontent.com/pedro-demeu/learn-ffmpeg-with-nodejs/main/image.png",
       linkTo: "https://github.com/pedro-demeu/learn-ffmpeg-with-nodejs",
       active: false
     },
@@ -82,13 +85,14 @@ const mockData: ProjetosData = {
       id: 5,
       titulo: "Teste de Conexão Local",
       descricao:
-        "Desenvolvi minha ferramenta de teste de conexão que roda Local e comunica com speedTest e gera um relatório ao final",
+        "Desenvolvi minha ferramenta de teste de velocidade de conexão. Gera um relatório ao final com link para o speed test.",
       tecnologias: [
         { id: 1, name: "ReactJS" },
         { id: 2, name: "Typescript" },
         { id: 6, name: "TailwindCSS" },
+        { id: 7, name: "SpeedTest API / Cloudflare API" },
       ],
-      imagem: '', // "https://github.com/pedro-demeu/teste-de-conexao/blob/main/images/home.png",
+      imagem:  "https://raw.githubusercontent.com/pedro-demeu/teste-de-conexao/main/images/home.png",
       linkTo: "https://github.com/pedro-demeu/teste-de-conexao",
       active: false
     },
@@ -96,13 +100,15 @@ const mockData: ProjetosData = {
       id: 6,
       titulo: "Chat-room",
       descricao:
-        "Chat Real-time com Web Sockets simula um Chat de Bate-papo.",
+        "Chat Real-time com Web Sockets simula um Chat de Bate-papo. Desenvolvido para demonstrar o uso correto dos Web Sockets durante a faculdade.",
       tecnologias: [
         { id: 1, name: "ReactJS" },
         { id: 2, name: "Typescript" },
-        { id: 6, name: "Web Sockets" },
+        { id: 3, name: "Web Sockets" },
+        { id: 4, name: "TailwindCSS" },
+        { id: 5, name: "Javascript" },
       ],
-      imagem: '', // "https://github.com/pedro-demeu/chat-room/blob/main/utils/demo.png",
+      imagem:  "https://raw.githubusercontent.com/pedro-demeu/chat-room/main/utils/demo.png",
       linkTo: "https://github.com/pedro-demeu/chat-room",
       active: false
     },

@@ -8,7 +8,6 @@ import {
   IconButton,
 } from "@mui/material";
 import mockData from "./mock";
-import ecommerceImage from '../../../assets/demo-ecommerce.png'
 
 export default function ProjectsSession() {
   const projects = mockData.projects;

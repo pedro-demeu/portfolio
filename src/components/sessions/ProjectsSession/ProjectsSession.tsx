@@ -26,6 +26,7 @@ export default function ProjectsSession() {
     >
       <Container>
         <Typography
+          component="h2"
           variant="h4"
           sx={{
             fontSize: "1rem",
@@ -41,6 +42,7 @@ export default function ProjectsSession() {
           Resultados do mundo real
         </Typography>
         <Typography
+          component="h3"
           variant="h4"
           sx={{
             fontSize: "2rem",
@@ -99,6 +101,7 @@ export default function ProjectsSession() {
                 height: '100%',
               }}>
                 <Typography
+                  component="h3"
                   variant="h6"
                   sx={{
                     marginY: 2.5,

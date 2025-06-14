@@ -92,6 +92,7 @@ export default function HomeSession() {
             />
             <Tooltip title="Disponível">
               <Box
+                aria-hidden="true"
                 sx={(theme) => ({
                   position: "absolute",
                   bottom: 10,

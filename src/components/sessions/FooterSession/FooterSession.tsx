@@ -18,7 +18,7 @@ export default function FooterSession() {
         width: "100%",
       }}
     >
-      <Typography variant="h6" sx={{ mb: 2 }}>
+      <Typography component="h4" variant="h6" sx={{ mb: 2 }}>
         Gostou do perfil? Vamos nos <strong>conectar!</strong>
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
@@ -63,7 +63,7 @@ export default function FooterSession() {
           variant="body2"
           sx={{
             mt: 2,
-            color: "gray",
+            color: "#AAA",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -73,6 +73,7 @@ export default function FooterSession() {
           Pedro Miguel Neves Demeu
           <Tooltip title="Disponível">
             <Box
+              aria-hidden="true"
               sx={(theme) => ({
                 height: 8,
                 width: 8,
@@ -82,7 +83,7 @@ export default function FooterSession() {
             />
           </Tooltip>
         </Typography>
-        <Typography variant="body2" mt={1} sx={{ color: "gray" }}>
+        <Typography variant="body2" mt={1} sx={{ color: "#AAA" }}>
           2019 - {currentYear}
         </Typography>
       </footer>

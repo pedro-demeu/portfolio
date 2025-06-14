@@ -205,6 +205,7 @@ export default function SkillsSession() {
     >
       <Container>
         <Typography
+          component="h2"
           variant="h4"
           sx={{
             fontSize: "1rem",
@@ -220,6 +221,7 @@ export default function SkillsSession() {
           Hard Skills
         </Typography>
         <Typography
+          component="h3"
           variant="h4"
           sx={{
             textAlign: "center",
@@ -263,9 +265,8 @@ export default function SkillsSession() {
           }}
         >
           {technologies.map((tech) => (
-            <Tooltip title={tech.description} placement="top">
+            <Tooltip key={tech.id} title={tech.description} placement="top">
               <Chip
-                key={tech.id}
                 label={tech.name}
                 sx={{
                   display: "flex",

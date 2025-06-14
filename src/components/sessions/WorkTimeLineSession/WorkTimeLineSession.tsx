@@ -91,6 +91,7 @@ export default function WorkTimeLineSession() {
     >
       <Container>
         <Typography
+          component="h2"
           variant="h4"
           sx={{
             fontSize: "1rem",
@@ -106,6 +107,7 @@ export default function WorkTimeLineSession() {
           Experiência
         </Typography>
         <Typography
+          component="h3"
           variant="h4"
           sx={{
             textAlign: "center",

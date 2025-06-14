@@ -1,20 +1,17 @@
 import {
-  Card,
-  CardContent,
   Typography,
   Box,
-  Button,
-  Tooltip,
   Container,
 } from "@mui/material";
-import unoparLogo from "../../../assets/unopar-logo.png";
+import unoparLogo from "../../../assets/unopar_transparente_100x86.png";
 import diplomaImage from "../../../assets/diploma.png";
 import frontImage from "../../../assets/FRONTEND-certificate.png";
 import seImage from "../../../assets/SoftwareEngineer-certificate.png";
 
-import hackerRankLogo from "../../../assets/hackerrank_logo.jpeg";
+import hackerRankLogo from "../../../assets/hackerrank_resized_100x86.png";
 import { useState } from "react";
 import { DegreeDialog } from "../../dialog";
+import { BadgeCertificationItem } from "./BadgeCertificationItem";
 
 export default function AcademicSession() {
   const [openDegree, setOpenDegree] = useState(false);
@@ -62,6 +59,7 @@ export default function AcademicSession() {
         }}
       >
         <Typography
+          component="h2"
           variant="h4"
           sx={{
             fontSize: "1rem",
@@ -77,6 +75,7 @@ export default function AcademicSession() {
           Resultados Acadêmicos
         </Typography>
         <Typography
+          component="h3"
           variant="h4"
           sx={{
             fontSize: "2rem",
@@ -115,117 +114,15 @@ export default function AcademicSession() {
             mb: 6,
           }}
         >
-          <Card
-            sx={{
-              backgroundColor: "#222",
-              color: "white",
-              borderRadius: 2,
-              width: "100%",
-              ":hover": {
-                boxShadow: "0 0 10px #111",
-                transform: "scale(1.02)",
-                transition: "0.3s",
-                backgroundColor: "#333",
-              },
-            }}
-          >
-            <CardContent>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 2,
-                }}
-              >
-                <img
-                  style={{
-                    height: 43,
-                    width: 50,
-                    marginTop: 20,
-                  }}
-                  src={unoparLogo}
-                  alt="University Logo"
-                />
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    width: "100%",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: "100%",
-                    }}
-                  >
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        marginBottom: 1,
-                        fontWeight: 700,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 2,
-                      }}
-                    >
-                      Engenharia de Software{" "}
-                      <Tooltip title="Completo">
-                        <Box
-                          sx={(theme) => ({
-                            height: 10,
-                            width: 10,
-                            bgcolor: theme.palette.success.light,
-                            borderRadius: "100%",
-                          })}
-                        />
-                      </Tooltip>
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "gray",
-                        mb: 1,
-                      }}
-                    >
-                      Universidade Pitágoras Unopar Anhanguera
-                    </Typography>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        width: "100%",
-                      }}
-                    >
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#ccc",
-                          textAlign: "justify",
-                          fontSize: "0.8rem",
-                        }}
-                      >
-                        2020 - 2024
-                      </Typography>
-                    </Box>
-                  </Box>
-                  <Button
-                    variant="text"
-                    size="small"
-                    color="primary"
-                    sx={{
-                      width: "50%",
-                    }}
-                    onClick={handleOpen}
-                  >
-                    Visualizar Diploma
-                  </Button>
-                </Box>
-              </Box>
-            </CardContent>
-          </Card>
+          <BadgeCertificationItem
+            src={unoparLogo}
+            title="Engenharia de Software"
+            entityName="Universidade Pitágoras Unopar Anhanguera"
+            actionText="Visualizar Diploma"
+            startYear={2020}
+            endYear={2024}
+            openCertificate={handleOpen}
+          />
         </Box>
         <Typography
           variant="h5"
@@ -243,235 +140,30 @@ export default function AcademicSession() {
             mb: 4,
           }}
         >
-          <Card
-            sx={{
-              backgroundColor: "#222",
-              color: "white",
-              borderRadius: 2,
-              width: "100%",
-              ":hover": {
-                boxShadow: "0 0 10px #111",
-                transform: "scale(1.02)",
-                transition: "0.3s",
-                backgroundColor: "#333",
-              },
-            }}
-          >
-            <CardContent>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 2,
-                }}
-              >
-                <img
-                  style={{
-                    height: 43,
-                    width: 50,
-                    marginTop: 20,
-                  }}
-                  src={hackerRankLogo}
-                  alt="University Logo"
-                />
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    width: "100%",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: "100%",
-                    }}
-                  >
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        marginBottom: 1,
-                        fontWeight: 700,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 2,
-                      }}
-                    >
-                      Frontend Developer (React)
-                      <Tooltip title="Completo">
-                        <Box
-                          sx={(theme) => ({
-                            height: 10,
-                            width: 10,
-                            bgcolor: theme.palette.success.light,
-                            borderRadius: "100%",
-                          })}
-                        />
-                      </Tooltip>
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "gray",
-                        mb: 1,
-                      }}
-                    >
-                      HackerRank
-                    </Typography>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        width: "100%",
-                      }}
-                    >
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#ccc",
-                          textAlign: "justify",
-                          fontSize: "0.8rem",
-                        }}
-                      >
-                        It covers topics like React, CSS, and JavaScript.
-                      </Typography>
-                    </Box>
-                  </Box>
-                  <Button
-                    variant="text"
-                    size="small"
-                    color="primary"
-                    sx={{
-                      width: "50%",
-                    }}
-                    onClick={handleOpenFront}
-                  >
-                    Visualizar Certificado
-                  </Button>
-                </Box>
-              </Box>
-            </CardContent>
-          </Card>
+          <BadgeCertificationItem
+            src={hackerRankLogo}
+            title="Frontend Deveveloper (React.js)"
+            entityName="HackerRank"
+            actionText="Visualizar Certificado"
+            startYear={2020}
+            openCertificate={handleOpenFront}
+            description="It covers topics like React, CSS, and JavaScript."
+          />
         </Box>
         <Box
           sx={{
             mb: 4,
           }}
         >
-          <Card
-            sx={{
-              backgroundColor: "#222",
-              color: "white",
-              borderRadius: 2,
-              width: "100%",
-              ":hover": {
-                boxShadow: "0 0 10px #111",
-                transform: "scale(1.02)",
-                transition: "0.3s",
-                backgroundColor: "#333",
-              },
-            }}
-          >
-            <CardContent>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 2,
-                }}
-              >
-                <img
-                  style={{
-                    height: 43,
-                    width: 50,
-                    marginTop: 20,
-                  }}
-                  src={hackerRankLogo}
-                  alt="University Logo"
-                />
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    width: "100%",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: "100%",
-                    }}
-                  >
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        marginBottom: 1,
-                        fontWeight: 700,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 2,
-                      }}
-                    >
-                      Software Engineer{" "}
-                      <Tooltip title="Completo">
-                        <Box
-                          sx={(theme) => ({
-                            height: 10,
-                            width: 10,
-                            bgcolor: theme.palette.success.light,
-                            borderRadius: "100%",
-                          })}
-                        />
-                      </Tooltip>
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "gray",
-                        mb: 1,
-                      }}
-                    >
-                      HackerRank
-                    </Typography>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        width: "100%",
-                      }}
-                    >
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#ccc",
-                          textAlign: "justify",
-                          fontSize: "0.8rem",
-                        }}
-                      >
-                        It covers topics like Problem solving, SQL, and REST
-                        API.
-                      </Typography>
-                    </Box>
-                  </Box>
-                  <Button
-                    variant="text"
-                    size="small"
-                    color="primary"
-                    sx={{
-                      width: "50%",
-                    }}
-                    onClick={handleOpenSoftEng}
-                  >
-                    Visualizar Certificado
-                  </Button>
-                </Box>
-              </Box>
-            </CardContent>
-          </Card>
+          <BadgeCertificationItem
+            src={hackerRankLogo}
+            title="Software Engineer"
+            entityName="HackerRank"
+            actionText="Visualizar Certificado"
+            startYear={2020}
+            openCertificate={handleOpenSoftEng}
+            description="It covers topics like Problem solving, SQL, and REST API."
+          />
         </Box>
         <DegreeDialog
           open={openDegree}

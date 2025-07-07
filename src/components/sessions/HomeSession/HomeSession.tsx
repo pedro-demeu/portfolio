@@ -10,23 +10,15 @@ import {
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { ContactMeDialog } from "../../dialog";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function HomeSession() {
   const [openContactMe, setOpenContactMe] = useState(false);
-
-  const handleOpen = React.useCallback(() => {
-    setOpenContactMe(true);
-  }, []);
-  const handleClose = React.useCallback(() => {
-    setOpenContactMe(false);
-  }, []);
+  const handleOpen = () => setOpenContactMe(true);
+  const handleClose = () => setOpenContactMe(false);
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
         padding: "2rem",
         width: "100%",
         bgcolor: "#191919",

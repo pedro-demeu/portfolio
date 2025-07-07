@@ -7,8 +7,10 @@ import unoparLogo from "../../../assets/unopar_transparente_100x86.png";
 import diplomaImage from "../../../assets/diploma.png";
 import frontImage from "../../../assets/FRONTEND-certificate.png";
 import seImage from "../../../assets/SoftwareEngineer-certificate.png";
-
+import awsLogo from '../../../assets/amazon_logo_100x86.png';
+import efSetEnglishLogo from '../../../assets/efset_logo_100x86.png';
 import hackerRankLogo from "../../../assets/hackerrank_resized_100x86.png";
+import amazonQImage from '../../../assets/aws_certificate.jpeg';
 import { useState } from "react";
 import { DegreeDialog } from "../../dialog";
 import { BadgeCertificationItem } from "./BadgeCertificationItem";
@@ -17,6 +19,8 @@ export default function AcademicSession() {
   const [openDegree, setOpenDegree] = useState(false);
   const [openFront, setOpenFront] = useState(false);
   const [openSoftEng, setOpenSoftEng] = useState(false);
+  const [openAmazonQ, setOpenAmazonQ] = useState(false);
+  
 
   const handleClose = () => {
     setOpenDegree(false);
@@ -33,7 +37,9 @@ export default function AcademicSession() {
   const handleOpenFront = () => {
     setOpenFront(true);
   };
-
+const handleOpenAWSCertification = () => {
+  setOpenAmazonQ(true);
+}
   const handleCloseSoftEng = () => {
     setOpenSoftEng(false);
   };
@@ -41,6 +47,12 @@ export default function AcademicSession() {
   const handleOpenSoftEng = () => {
     setOpenSoftEng(true);
   };
+
+  const handleCloseAmazonQ = () => {
+    setOpenAmazonQ(false);
+  };
+
+ 
   return (
     <Box
       sx={{
@@ -121,9 +133,52 @@ export default function AcademicSession() {
             actionText="Visualizar Diploma"
             startYear={2020}
             endYear={2024}
-            openCertificate={handleOpen}
+            onClick={handleOpen}
           />
         </Box>
+        <Typography
+          variant="h5"
+          sx={{
+            fontSize: "1rem",
+            marginBottom: "2rem",
+            textTransform: "uppercase",
+            fontWeight: 700,
+          }}
+        >
+          Certificações
+        </Typography>
+        <Box
+          sx={{
+            mb: 4,
+          }}
+        >
+          <BadgeCertificationItem
+            src={awsLogo}
+            title="Amazon Q Developer Getting Started"
+            entityName="Amazon Web Services (AWS)"
+            actionText="Visualizar Certificação"
+            startYear={2025}
+            onClick={handleOpenAWSCertification}
+            description="It covers topics like Code Agent, Vibe Coding and Amazon Q tools"
+          />
+        </Box>
+
+        <Box
+          sx={{
+            mb: 6,
+          }}
+        >
+          <BadgeCertificationItem
+            src={efSetEnglishLogo}
+            title="English Certificate (B1 Intermediate)"
+            entityName="EF SET English"
+            actionText="Visualizar Certificação"
+            startYear={2025}
+            redirectUrl="https://cert.efset.org/en/6LwF65"
+            redirect
+          />
+        </Box>
+
         <Typography
           variant="h5"
           sx={{
@@ -146,7 +201,7 @@ export default function AcademicSession() {
             entityName="HackerRank"
             actionText="Visualizar Certificado"
             startYear={2020}
-            openCertificate={handleOpenFront}
+            onClick={handleOpenFront}
             description="It covers topics like React, CSS, and JavaScript."
           />
         </Box>
@@ -161,7 +216,7 @@ export default function AcademicSession() {
             entityName="HackerRank"
             actionText="Visualizar Certificado"
             startYear={2020}
-            openCertificate={handleOpenSoftEng}
+            onClick={handleOpenSoftEng}
             description="It covers topics like Problem solving, SQL, and REST API."
           />
         </Box>
@@ -185,6 +240,14 @@ export default function AcademicSession() {
           onClose={handleCloseSoftEng}
           src={seImage}
           alt="Certificado Software Engineer"
+        />
+        
+        <DegreeDialog
+          open={openAmazonQ}
+          name="Certificado"
+          onClose={handleCloseAmazonQ}
+          src={amazonQImage}
+          alt="Certificado Amazon Q Developer"
         />
       </Container>
     </Box>

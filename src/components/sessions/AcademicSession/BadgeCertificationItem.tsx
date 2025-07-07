@@ -6,6 +6,7 @@ import {
   Typography,
   Tooltip,
   Button,
+  Link,
 } from "@mui/material";
 import { useCallback } from "react";
 
@@ -13,25 +14,29 @@ type ItemProps = {
   src: string;
   title: string;
   entityName: string;
-  openCertificate: () => void;
+  onClick?: () => void;
   actionText: string;
   startYear: number;
   endYear?: number;
   description?: string;
+  redirect?: boolean;
+  redirectUrl?: string;
 };
 export function BadgeCertificationItem({
   src,
   title,
   entityName,
-  openCertificate,
+  onClick,
   actionText,
   startYear,
   endYear,
   description,
+  redirect = false,
+  redirectUrl,
 }: ItemProps) {
   const handleOpen = useCallback(() => {
-    openCertificate();
-  }, [openCertificate]);
+    onClick?.();
+  }, [onClick]);
   return (
     <Card
       sx={{
@@ -112,7 +117,7 @@ export function BadgeCertificationItem({
                   }}
                 >
                   {startYear} {endYear ? `-${endYear}` : null}
-                </Typography>                
+                </Typography>
               </Box>
               {description && <Typography variant="body2"
                 sx={{
@@ -122,20 +127,35 @@ export function BadgeCertificationItem({
                   fontSize: "0.8rem",
                 }}>{description}</Typography>}
             </Box>
-            <Button
+            {redirect ? <Button
               variant="contained"
               size="small"
               color="primary"
               sx={{
                 width: "50%",
               }}
-              onClick={handleOpen}
             >
-              {actionText}
-            </Button>
+              <Link href={redirectUrl} target="_blank" sx={(theme) => ({
+                color: theme.palette.common.white,
+                textDecoration: 'none'
+              })}>
+                {actionText}
+              </Link>
+            </Button> :
+              <Button
+                variant="contained"
+                size="small"
+                color="primary"
+                sx={{
+                  width: "50%",
+                }}
+                onClick={handleOpen}
+              >
+                {actionText}
+              </Button>}
           </Box>
         </Box>
-       
+
       </CardContent>
     </Card>
   );

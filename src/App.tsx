@@ -7,6 +7,7 @@ import {
   FooterSession,
   WorkTimeLineSession,
 } from "./components/sessions";
+import { BackToTopButton } from "./components/core";
 import { ToastContainer } from "react-toastify";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <SkillsSession />
       </Box>
       <FooterSession />
+      <BackToTopButton />
     </>
   );
 }

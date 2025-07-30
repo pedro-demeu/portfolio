@@ -14,6 +14,7 @@ import amazonQImage from '../../../assets/aws_certificate.jpeg';
 import { useState } from "react";
 import { DegreeDialog } from "../../dialog";
 import { BadgeCertificationItem } from "./BadgeCertificationItem";
+import { AnimatedSection } from "../../core";
 
 export default function AcademicSession() {
   const [openDegree, setOpenDegree] = useState(false);
@@ -121,105 +122,119 @@ const handleOpenAWSCertification = () => {
           processo de desenvolvimento.
         </Typography>
 
-        <Box
-          sx={{
-            mb: 6,
-          }}
-        >
-          <BadgeCertificationItem
-            src={unoparLogo}
-            title="Engenharia de Software"
-            entityName="Universidade Pitágoras Unopar Anhanguera"
-            actionText="Visualizar Diploma"
-            startYear={2020}
-            endYear={2024}
-            onClick={handleOpen}
-          />
-        </Box>
-        <Typography
-          variant="h5"
-          sx={{
-            fontSize: "1rem",
-            marginBottom: "2rem",
-            textTransform: "uppercase",
-            fontWeight: 700,
-          }}
-        >
-          Certificações
-        </Typography>
-        <Box
-          sx={{
-            mb: 4,
-          }}
-        >
-          <BadgeCertificationItem
-            src={awsLogo}
-            title="Amazon Q Developer Getting Started"
-            entityName="Amazon Web Services (AWS)"
-            actionText="Visualizar Certificação"
-            startYear={2025}
-            onClick={handleOpenAWSCertification}
-            description="It covers topics like Code Agent, Vibe Coding and Amazon Q tools"
-          />
-        </Box>
+        <AnimatedSection animation="fadeInUp" delay={200}>
+          <Box
+            sx={{
+              mb: 6,
+            }}
+          >
+            <BadgeCertificationItem
+              src={unoparLogo}
+              title="Engenharia de Software"
+              entityName="Universidade Pitágoras Unopar Anhanguera"
+              actionText="Visualizar Diploma"
+              startYear={2020}
+              endYear={2024}
+              onClick={handleOpen}
+            />
+          </Box>
+        </AnimatedSection>
+        <AnimatedSection animation="fadeInUp" delay={400}>
+          <Typography
+            variant="h5"
+            sx={{
+              fontSize: "1rem",
+              marginBottom: "2rem",
+              textTransform: "uppercase",
+              fontWeight: 700,
+            }}
+          >
+            Certificações
+          </Typography>
+        </AnimatedSection>
+        <AnimatedSection animation="fadeInLeft" delay={600}>
+          <Box
+            sx={{
+              mb: 4,
+            }}
+          >
+            <BadgeCertificationItem
+              src={awsLogo}
+              title="Amazon Q Developer Getting Started"
+              entityName="Amazon Web Services (AWS)"
+              actionText="Visualizar Certificação"
+              startYear={2025}
+              onClick={handleOpenAWSCertification}
+              description="It covers topics like Code Agent, Vibe Coding and Amazon Q tools"
+            />
+          </Box>
+        </AnimatedSection>
 
-        <Box
-          sx={{
-            mb: 6,
-          }}
-        >
-          <BadgeCertificationItem
-            src={efSetEnglishLogo}
-            title="English Certificate (B1 Intermediate)"
-            entityName="EF SET English"
-            actionText="Visualizar Certificação"
-            startYear={2025}
-            redirectUrl="https://cert.efset.org/en/6LwF65"
-            redirect
-          />
-        </Box>
+        <AnimatedSection animation="fadeInRight" delay={800}>
+          <Box
+            sx={{
+              mb: 6,
+            }}
+          >
+            <BadgeCertificationItem
+              src={efSetEnglishLogo}
+              title="English Certificate (B1 Intermediate)"
+              entityName="EF SET English"
+              actionText="Visualizar Certificação"
+              startYear={2025}
+              redirectUrl="https://cert.efset.org/en/6LwF65"
+              redirect
+            />
+          </Box>
+        </AnimatedSection>
 
-        <Typography
-          variant="h5"
-          sx={{
-            fontSize: "1rem",
-            marginBottom: "2rem",
-            textTransform: "uppercase",
-            fontWeight: 700,
-          }}
-        >
-          Cursos relevantes
-        </Typography>
-        <Box
-          sx={{
-            mb: 4,
-          }}
-        >
-          <BadgeCertificationItem
-            src={hackerRankLogo}
-            title="Frontend Deveveloper (React.js)"
-            entityName="HackerRank"
-            actionText="Visualizar Certificado"
-            startYear={2020}
-            onClick={handleOpenFront}
-            description="It covers topics like React, CSS, and JavaScript."
-          />
-        </Box>
-        <Box
-          sx={{
-            mb: 4,
-          }}
-        >
-          <BadgeCertificationItem
-            src={hackerRankLogo}
-            title="Software Engineer"
-            entityName="HackerRank"
-            actionText="Visualizar Certificado"
-            startYear={2020}
-            onClick={handleOpenSoftEng}
-            description="It covers topics like Problem solving, SQL, and REST API."
-          />
-        </Box>
+        <AnimatedSection animation="fadeInUp" delay={1000}>
+          <Typography
+            variant="h5"
+            sx={{
+              fontSize: "1rem",
+              marginBottom: "2rem",
+              textTransform: "uppercase",
+              fontWeight: 700,
+            }}
+          >
+            Cursos relevantes
+          </Typography>
+        </AnimatedSection>
+        <AnimatedSection animation="fadeInLeft" delay={1200}>
+          <Box
+            sx={{
+              mb: 4,
+            }}
+          >
+            <BadgeCertificationItem
+              src={hackerRankLogo}
+              title="Frontend Deveveloper (React.js)"
+              entityName="HackerRank"
+              actionText="Visualizar Certificado"
+              startYear={2020}
+              onClick={handleOpenFront}
+              description="It covers topics like React, CSS, and JavaScript."
+            />
+          </Box>
+        </AnimatedSection>
+        <AnimatedSection animation="fadeInRight" delay={1400}>
+          <Box
+            sx={{
+              mb: 4,
+            }}
+          >
+            <BadgeCertificationItem
+              src={hackerRankLogo}
+              title="Software Engineer"
+              entityName="HackerRank"
+              actionText="Visualizar Certificado"
+              startYear={2020}
+              onClick={handleOpenSoftEng}
+              description="It covers topics like Problem solving, SQL, and REST API."
+            />
+          </Box>
+        </AnimatedSection>
         <DegreeDialog
           open={openDegree}
           name="Diploma"

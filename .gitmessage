@@ -1,0 +1,14 @@
+# <tipo>: <descrição>
+#
+# <corpo opcional>
+#
+# <rodapé opcional>
+#
+# Tipos permitidos:
+# feat: nova funcionalidade
+# fix: correção de bug
+# docs: documentação
+# style: formatação, ponto e vírgula, etc
+# refactor: refatoração de código
+# test: adição ou correção de testes
+# chore: tarefas de build, configuração, etc

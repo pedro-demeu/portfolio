@@ -7,6 +7,7 @@ import {
   Container,
   IconButton,
 } from "@mui/material";
+import { AnimatedSection } from "../../core";
 import mockData from "./mock";
 
 export default function ProjectsSession() {
@@ -78,21 +79,42 @@ export default function ProjectsSession() {
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           }}
         >
-          {projects.map((project) => (
-            <Card
+          {projects.map((project, index) => (
+            <AnimatedSection
               key={project.id}
-              sx={{
-                backgroundColor: project.active ? "#2E2E2E" : "#222",
-                color: "white",
-                borderRadius: 2,
-                ":hover": {
-                  boxShadow: "0 0 10px #111",
-                  transform: "scale(1.02)",
-                  transition: "0.3s",
-                  backgroundColor: "#333",
-                },
-              }}
+              animation="fadeInUp"
+              delay={index * 200}
             >
+              <Card
+                sx={{
+                  backgroundColor: project.active ? "#2E2E2E" : "#222",
+                  color: "white",
+                  borderRadius: 2,
+                  height: "100%",
+                  cursor: "pointer",
+                  position: "relative",
+                  overflow: "hidden",
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    top: 0,
+                    left: "-100%",
+                    width: "100%",
+                    height: "100%",
+                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)",
+                    transition: "left 0.5s",
+                  },
+                  ":hover": {
+                    transform: "translateY(-10px)",
+                    transition: "all 0.3s ease-in-out",
+                    backgroundColor: project.active ? "#333" : "#2A2A2A",
+                    "&::before": {
+                      left: "100%",
+                    },
+                  },
+                  transition: "all 0.3s ease-in-out",
+                }}
+              >
               <CardContent sx={{
                 flex: '1 1 auto',
                 display: 'flex',
@@ -158,7 +180,8 @@ export default function ProjectsSession() {
                   </Box>
                 )}
               </CardContent>
-            </Card>
+              </Card>
+            </AnimatedSection>
           ))}
         </Box>
       </Container>

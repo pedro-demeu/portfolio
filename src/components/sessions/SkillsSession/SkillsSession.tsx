@@ -1,4 +1,5 @@
 import { Box, Chip, Container, Tooltip, Typography } from "@mui/material";
+import { AnimatedSection } from "../../core";
 
 const technologies = [
   {
@@ -264,29 +265,35 @@ export default function SkillsSession() {
             margin: "0 auto",
           }}
         >
-          {technologies.map((tech) => (
-            <Tooltip key={tech.id} title={tech.description} placement="top">
-              <Chip
-                label={tech.name}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  border: "1px solid linear-gradient(90deg, #ff8a00, #e52e71)",
-                  fontFamily: "sans-serif",
-                  borderRadius: "8px",
-                  bgcolor: '#424242',
-                  color: "white",
-                  padding: "0.5rem",
-                  transition: "transform 0.3s ease, background-color 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                    background: "linear-gradient(90deg, #ff8a00, #e52e71)",
-                    cursor: "pointer",
-                  },
-                }}
-              />
-            </Tooltip>
+          {technologies.map((tech, index) => (
+            <AnimatedSection
+              key={tech.id}
+              animation="fadeInUp"
+              delay={index * 50}
+            >
+              <Tooltip title={tech.description} placement="top">
+                <Chip
+                  label={tech.name}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    border: "1px solid linear-gradient(90deg, #ff8a00, #e52e71)",
+                    fontFamily: "sans-serif",
+                    borderRadius: "8px",
+                    bgcolor: '#424242',
+                    color: "white",
+                    padding: "0.5rem",
+                    transition: "transform 0.3s ease, background-color 0.3s ease",
+                    "&:hover": {
+                      transform: "scale(1.05)",
+                      background: "linear-gradient(90deg, #ff8a00, #e52e71)",
+                      cursor: "pointer",
+                    },
+                  }}
+                />
+              </Tooltip>
+            </AnimatedSection>
           ))}
         </Box>
       </Container>

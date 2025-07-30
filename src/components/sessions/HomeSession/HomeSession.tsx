@@ -10,6 +10,7 @@ import {
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { ContactMeDialog } from "../../dialog";
+import { AnimatedSection } from "../../core";
 import { useState } from "react";
 
 export default function HomeSession() {
@@ -24,11 +25,28 @@ export default function HomeSession() {
         bgcolor: "#191919",
         margin: "0 auto",
         height: "100vh",
+        position: "relative",
+        overflow: "hidden",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: "url('https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.1,
+          zIndex: 0,
+        },
       }}
     >
       <Container
         sx={{
           maxWidth: "800px!important",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <Box
@@ -41,35 +59,37 @@ export default function HomeSession() {
             width: "100%",
           }}
         >
-          <Box>
-            <Typography
-              variant="h1"
+          <AnimatedSection animation="fadeInLeft">
+            <Box>
+              <Typography
+                variant="h1"
+                sx={{
+                  fontSize: "2.5rem",
+                  fontWeight: 700,
+                  mb: "0.5rem",
+                }}
+              >
+                Olá, eu sou Pedro Demeu
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontSize: "1rem",
+                  fontWeight: 500,
+                  color: "#ccc",
+                }}
+              >
+                Frontend Engineer | Bacharel em Engenharia de Software
+              </Typography>
+            </Box>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeInRight" delay={300}>
+            <Box
               sx={{
-                fontSize: "2.5rem",
-                fontWeight: 700,
-                mb: "0.5rem",
+                borderRadius: "50%",
+                position: "relative",
               }}
             >
-              Olá, eu sou Pedro Demeu
-            </Typography>
-            <Typography
-              variant="h2"
-              sx={{
-                fontSize: "1rem",
-                fontWeight: 500,
-                color: "#ccc",
-              }}
-            >
-              Frontend Engineer | Bacharel em Engenharia de Software
-            </Typography>
-
-          </Box>
-          <Box
-            sx={{
-              borderRadius: "50%",
-              position: "relative",
-            }}
-          >
             <img
               src="https://github.com/pedro-demeu.png"
               alt="Pedro Demeu"
@@ -97,79 +117,85 @@ export default function HomeSession() {
                 })}
               />
             </Tooltip>
-          </Box>
+            </Box>
+          </AnimatedSection>
         </Box>
-        <Typography
-          sx={{
-            fontSize: "1.2rem",
-            mb: "1rem",
-            fontWeight: 500,
-            color: "#ccc",
-            mt: "1rem",
-          }}
-        >
-          Sobre
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: "1rem",
-            color: "#aaa",
-            mb: "1rem",
-          }}
-        >
-          Desenvolvedor de Software com mais de{" "}
-          <strong style={{ color: "#DDD" }}>5 anos de experiência</strong>, impactando milhares de pessoas todos os dias.
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: "1rem",
-            color: "#aaa",
-            mb: "1rem",
-          }}
-        >
-          Hoje atuo como <strong style={{ color: "#DDD" }}>Frontend Software Engineer</strong>, mantendo em produção uma{" "}
-          <strong style={{ color: "#DDD" }}>plataforma de vídeo-monitoramento em nuvem (VMS Cloud)</strong>.
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: "1rem",
-            color: "#aaa",
-            mb: "1rem",
-          }}
-        >
-          Tenho muita bagagem com <strong style={{ color: "#DDD" }}>Processos de desenvolvimento, Testes Automatizados, Code Review</strong>, além de{" "}
-          <strong style={{ color: "#DDD" }}>experiência em Devops CI/CD, Integrações de API RESTful</strong> e uma{" "}
-          <strong style={{ color: "#DDD" }}>visão Full-Stack</strong> com backend em{" "}
-          <strong style={{ color: "#DDD" }}>Node.js, NestJS, Java Spring Boot e Django</strong>.
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: "0.85rem",
-            fontStyle: 'italic',
-            color: "#aaa",
-            mb: "2rem",
-            mt: 6,
-          }}
-        >
-          Stack principal:{" "}
-          <strong style={{ color: "#DDD" }}>
-            JavaScript • TypeScript • ReactJS • React Native • Node.js • Java Spring Boot • Jest • Jira • Bitbucket • Video.js • SWR • React Testing Library • Cypress • NestJS
-          </strong>
-        </Typography>
+        <AnimatedSection animation="fadeInUp" delay={600}>
+          <Typography
+            sx={{
+              fontSize: "1.2rem",
+              mb: "1rem",
+              fontWeight: 500,
+              color: "#ccc",
+              mt: "1rem",
+            }}
+          >
+            Sobre
+          </Typography>
+        </AnimatedSection>
+        <AnimatedSection animation="fadeInUp" delay={800}>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: "1rem",
+              color: "#aaa",
+              mb: "1rem",
+            }}
+          >
+            Desenvolvedor de Software com mais de{" "}
+            <strong style={{ color: "#DDD" }}>5 anos de experiência</strong>, impactando milhares de pessoas todos os dias.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: "1rem",
+              color: "#aaa",
+              mb: "1rem",
+            }}
+          >
+            Hoje atuo como <strong style={{ color: "#DDD" }}>Frontend Software Engineer</strong>, mantendo em produção uma{" "}
+            <strong style={{ color: "#DDD" }}>plataforma de vídeo-monitoramento em nuvem (VMS Cloud)</strong>.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: "1rem",
+              color: "#aaa",
+              mb: "1rem",
+            }}
+          >
+            Tenho muita bagagem com <strong style={{ color: "#DDD" }}>Processos de desenvolvimento, Testes Automatizados, Code Review</strong>, além de{" "}
+            <strong style={{ color: "#DDD" }}>experiência em Devops CI/CD, Integrações de API RESTful</strong> e uma{" "}
+            <strong style={{ color: "#DDD" }}>visão Full-Stack</strong> com backend em{" "}
+            <strong style={{ color: "#DDD" }}>Node.js, NestJS, Java Spring Boot e Django</strong>.
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "0.85rem",
+              fontStyle: 'italic',
+              color: "#aaa",
+              mb: "2rem",
+              mt: 6,
+            }}
+          >
+            Stack principal:{" "}
+            <strong style={{ color: "#DDD" }}>
+              JavaScript • TypeScript • ReactJS • React Native • Node.js • Java Spring Boot • Jest • Jira • Bitbucket • Video.js • SWR • React Testing Library • Cypress • NestJS
+            </strong>
+          </Typography>
+        </AnimatedSection>
 
 
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            mt: 6,
-          }}
-        >
+        <AnimatedSection animation="fadeInUp" delay={1000}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              mt: 6,
+            }}
+          >
           <Box
             sx={{
               display: "flex",
@@ -249,7 +275,8 @@ export default function HomeSession() {
               </Tooltip>
             </Link>
           </Box>
-        </Box>
+          </Box>
+        </AnimatedSection>
         <ContactMeDialog open={openContactMe} onClose={handleClose} />
       </Container>
     </Box>

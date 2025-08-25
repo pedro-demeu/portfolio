@@ -114,7 +114,7 @@ export default function HomeSession() {
                 borderRadius: "50%",
               }}
             />
-            <Tooltip title="Disponível">
+            <Tooltip title={t('home.available')}>
               <Box
                 aria-hidden="true"
                 sx={(theme) => ({
@@ -154,8 +154,8 @@ export default function HomeSession() {
               mb: "1rem",
             }}
           >
-            Desenvolvedor de Software com mais de{" "}
-            <strong style={{ color: "#DDD" }}>5 anos de experiência</strong>, impactando milhares de pessoas todos os dias.
+            {t('home.description1')}{" "}
+            <strong style={{ color: "#DDD" }}>{t('home.experience')}</strong>{t('home.description1End')}
           </Typography>
           <Typography
             variant="body1"
@@ -165,8 +165,8 @@ export default function HomeSession() {
               mb: "1rem",
             }}
           >
-            Hoje atuo como <strong style={{ color: "#DDD" }}>Frontend Software Engineer</strong>, mantendo em produção uma{" "}
-            <strong style={{ color: "#DDD" }}>plataforma de vídeo-monitoramento em nuvem (VMS Cloud)</strong>.
+            {t('home.description2Start')} <strong style={{ color: "#DDD" }}>{t('home.currentRole')}</strong>{t('home.description2Middle')}{" "}
+            <strong style={{ color: "#DDD" }}>{t('home.platform')}</strong>{t('home.description2End')}
           </Typography>
           <Typography
             variant="body1"
@@ -176,10 +176,10 @@ export default function HomeSession() {
               mb: "1rem",
             }}
           >
-            Tenho muita bagagem com <strong style={{ color: "#DDD" }}>Processos de desenvolvimento, Testes Automatizados, Code Review</strong>, além de{" "}
-            <strong style={{ color: "#DDD" }}>experiência em Devops CI/CD, Integrações de API RESTful</strong> e uma{" "}
-            <strong style={{ color: "#DDD" }}>visão Full-Stack</strong> com backend em{" "}
-            <strong style={{ color: "#DDD" }}>Node.js, NestJS, Java Spring Boot e Django</strong>.
+            {t('home.description3Start')} <strong style={{ color: "#DDD" }}>{t('home.skills1')}</strong>{t('home.description3Middle')}{" "}
+            <strong style={{ color: "#DDD" }}>{t('home.skills2')}</strong>{t('home.description3Middle2')}{" "}
+            <strong style={{ color: "#DDD" }}>{t('home.fullStack')}</strong>{t('home.description3Middle3')}{" "}
+            <strong style={{ color: "#DDD" }}>{t('home.backendTech')}</strong>{t('home.description3End')}
           </Typography>
           <Typography
             sx={{
@@ -190,9 +190,9 @@ export default function HomeSession() {
               mt: 6,
             }}
           >
-            Stack principal:{" "}
+            {t('home.stackLabel')}{" "}
             <strong style={{ color: "#DDD" }}>
-              JavaScript • TypeScript • ReactJS • React Native • Node.js • Java Spring Boot • Jest • Jira • Bitbucket • Video.js • SWR • React Testing Library • Cypress • NestJS
+              {t('home.techStack')}
             </strong>
           </Typography>
         </AnimatedSection>

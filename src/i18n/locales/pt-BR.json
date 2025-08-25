@@ -10,11 +10,29 @@
     "greeting": "Olá, eu sou",
     "name": "Pedro Demeu",
     "title": "Frontend Engineer | Bacharel em Engenharia de Software",
-    "description": "Desenvolvedor apaixonado por tecnologia, sempre em busca de novos desafios e aprendizados."
+    "available": "Disponível",
+    "description1": "Desenvolvedor de Software com mais de",
+    "experience": "5 anos de experiência",
+    "description1End": ", impactando milhares de pessoas todos os dias.",
+    "description2Start": "Hoje atuo como",
+    "currentRole": "Frontend Software Engineer",
+    "description2Middle": ", mantendo em produção uma",
+    "platform": "plataforma de vídeo-monitoramento em nuvem (VMS Cloud)",
+    "description2End": ".",
+    "description3Start": "Tenho muita bagagem com",
+    "skills1": "Processos de desenvolvimento, Testes Automatizados, Code Review",
+    "description3Middle": ", além de",
+    "skills2": "experiência em Devops CI/CD, Integrações de API RESTful",
+    "description3Middle2": " e uma",
+    "fullStack": "visão Full-Stack",
+    "description3Middle3": " com backend em",
+    "backendTech": "Node.js, NestJS, Java Spring Boot e Django",
+    "description3End": ".",
+    "stackLabel": "Stack principal:",
+    "techStack": "JavaScript • TypeScript • ReactJS • React Native • Node.js • Java Spring Boot • Jest • Jira • Bitbucket • Video.js • SWR • React Testing Library • Cypress • NestJS"
   },
   "about": {
-    "title": "Sobre",
-    "description": "Desenvolvedor com experiência em tecnologias modernas, focado em criar soluções eficientes e escaláveis."
+    "title": "Sobre"
   },
   "projects": {
     "title": "Projetos",

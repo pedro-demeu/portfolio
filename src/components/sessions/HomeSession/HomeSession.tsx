@@ -10,10 +10,12 @@ import {
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { ContactMeDialog } from "../../dialog";
-import { AnimatedSection } from "../../core";
+import { AnimatedSection, LanguageSelector } from "../../core";
 import { useState } from "react";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export default function HomeSession() {
+  const { t } = useTranslation();
   const [openContactMe, setOpenContactMe] = useState(false);
   const handleOpen = () => setOpenContactMe(true);
   const handleClose = () => setOpenContactMe(false);
@@ -42,6 +44,16 @@ export default function HomeSession() {
         },
       }}
     >
+      <Box
+        sx={{
+          position: "absolute",
+          top: 20,
+          right: 20,
+          zIndex: 2,
+        }}
+      >
+        <LanguageSelector />
+      </Box>
       <Container
         sx={{
           maxWidth: "800px!important",
@@ -69,7 +81,7 @@ export default function HomeSession() {
                   mb: "0.5rem",
                 }}
               >
-                Olá, eu sou Pedro Demeu
+                {t('home.greeting')} {t('home.name')}
               </Typography>
               <Typography
                 variant="h2"
@@ -79,7 +91,7 @@ export default function HomeSession() {
                   color: "#ccc",
                 }}
               >
-                Frontend Engineer | Bacharel em Engenharia de Software
+                {t('home.title')}
               </Typography>
             </Box>
           </AnimatedSection>
@@ -130,7 +142,7 @@ export default function HomeSession() {
               mt: "1rem",
             }}
           >
-            Sobre
+            {t('about.title')}
           </Typography>
         </AnimatedSection>
         <AnimatedSection animation="fadeInUp" delay={800}>
@@ -228,7 +240,7 @@ export default function HomeSession() {
                   fontWeight: 500,
                 }}
               >
-                Conhecer Mais
+                {t('nav.about')}
               </Typography>
             </Box>
 
@@ -241,7 +253,7 @@ export default function HomeSession() {
               }}
               onClick={handleOpen}
             >
-              Contate-me 👋
+              {t('nav.contact')} 👋
             </Button>
           </Box>
           <Box

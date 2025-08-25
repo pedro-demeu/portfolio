@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Conhecer Mais",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Contate-me"
+  },
+  "home": {
+    "greeting": "Olá, eu sou",
+    "name": "Pedro Demeu",
+    "title": "Frontend Engineer | Bacharel em Engenharia de Software",
+    "description": "Desenvolvedor apaixonado por tecnologia, sempre em busca de novos desafios e aprendizados."
+  },
+  "about": {
+    "title": "Sobre",
+    "description": "Desenvolvedor com experiência em tecnologias modernas, focado em criar soluções eficientes e escaláveis."
+  },
+  "projects": {
+    "title": "Projetos",
+    "viewProject": "Ver Projeto",
+    "viewCode": "Ver Código"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Ferramentas"
+  },
+  "contact": {
+    "title": "Contato",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "send": "Enviar",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Erro ao enviar mensagem. Tente novamente."
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados"
+  }
+}

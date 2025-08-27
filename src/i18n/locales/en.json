@@ -36,14 +36,77 @@
   },
   "projects": {
     "title": "Projects",
-    "viewProject": "View Project",
-    "viewCode": "View Code"
+    "subtitle": "Real world results",
+    "featuredTitle": "Featured projects",
+    "description": "Here are some projects I've worked on recently. Helping my clients achieve their goals.",
+    "viewProject": "View project",
+    "viewCode": "View Code",
+    "youAreHere": "You are here",
+    "items": {
+      "1": {
+        "title": "VMS Cloud",
+        "description": "Video monitoring product where I develop new features and maintain the application in production for 4 years."
+      },
+      "2": {
+        "title": "E-Commerce Web Application",
+        "description": "E-commerce project built with NextJS@14 to deepen my knowledge in the technology"
+      },
+      "3": {
+        "title": "Portfolio Website",
+        "description": "Development of this portfolio website to showcase skills, projects and professional journey."
+      },
+      "4": {
+        "title": "Video processing and conversion API with FFMPEG",
+        "description": "I developed this API for video processing and conversion (MP4, HEVC, M3u8, FLV)"
+      },
+      "5": {
+        "title": "Local Connection Test",
+        "description": "I developed my connection speed testing tool. Generates a report at the end with a link to the speed test."
+      },
+      "6": {
+        "title": "Chat-room",
+        "description": "Real-time Chat with Web Sockets simulates a Chat room. Developed to demonstrate the correct use of Web Sockets during college."
+      }
+    }
   },
   "skills": {
     "title": "Skills",
+    "subtitle": "Hard Skills",
+    "technicalSkills": "Technical Skills",
+    "description": "I have a broad set of technical skills ranging from <strong>frontend</strong> development with <strong>React</strong> and <strong>TypeScript</strong> to <strong>backend</strong> with <strong>Node.js and Java</strong>. I have experience with modern frameworks, databases, and agile methodologies, always seeking development best practices.",
     "frontend": "Frontend",
     "backend": "Backend",
-    "tools": "Tools"
+    "tools": "Tools",
+    "technologies": {
+      "1": "A JavaScript library for building user interfaces.",
+      "2": "The standard markup language for creating web pages.",
+      "3": "A typed superset of JavaScript that compiles to plain JavaScript.",
+      "4": "A style language used to define the presentation of a document.",
+      "5": "A high-level, dynamic, and multi-paradigm programming language.",
+      "6": "A state management library for React.",
+      "7": "A popular component framework for React.",
+      "8": "A utility CSS framework for rapid interface development.",
+      "9": "A framework for creating native mobile apps using React.",
+      "10": "A React framework for server-side rendering and static export of applications.",
+      "11": "A library for React and React Native that allows writing styles within JavaScript.",
+      "12": "A JavaScript testing framework.",
+      "13": "A platform for hosting frontend applications and static sites.",
+      "14": "A distributed version control system.",
+      "15": "A Git repository management solution.",
+      "16": "A set of principles for agile software development.",
+      "17": "An object-oriented and high-level programming language.",
+      "18": "A document-oriented NoSQL database.",
+      "19": "An open-source relational database management system.",
+      "20": "A platform for creating and managing containers.",
+      "21": "A JavaScript runtime environment based on Chrome's V8 engine.",
+      "22": "A progressive framework for developing server-side applications with Node.js.",
+      "23": "A Java framework for creating microservices.",
+      "24": "An in-memory data storage used as database, cache and message broker.",
+      "25": "A React framework for building optimized user experiences.",
+      "26": "A communication protocol for media transmission over the internet.",
+      "27": "An open-source HTML5 video player.",
+      "28": "A minimalist and flexible web framework for Node.js."
+    }
   },
   "contact": {
     "title": "Contact",
@@ -54,7 +117,88 @@
     "success": "Message sent successfully!",
     "error": "Error sending message. Please try again."
   },
+  "work": {
+    "title": "Experience",
+    "subtitle": "Professional",
+    "description": "In this section, I share my",
+    "experiences": "professional experiences",
+    "and": "and trajectory in the",
+    "market": "job market",
+    "highlighting": ", highlighting my",
+    "contributions": "contributions",
+    "andLearning": "and",
+    "learnings": "learnings",
+    "overYears": "over the years.",
+    "skills": "Skills",
+    "experiences": [
+      {
+        "year": "2021 - 2025 (currently)",
+        "company": "Segware Security Performance",
+        "role": "Frontend Software Engineer (Mid-level)",
+        "description": "At Segware, I contribute significantly to the development of new features and improvement of the company's products, impacting thousands of customers. Cloud video monitoring product (VMS Cloud)"
+      },
+      {
+        "year": "2020 - 2021",
+        "company": "BlockIT Security",
+        "role": "FullStack Software Engineer (Part-time)",
+        "description": "At BlockIT, a software house, I had an active and essential role in software development. I contributed significantly to the continuous improvement of existing software, ensuring an optimized experience for users. Additionally, I actively participated in the creation and implementation of innovative new projects, including ERPs, CRMs, and Landing Pages."
+      },
+      {
+        "year": "2020 - 2021",
+        "company": "Internet Provider - Intera",
+        "role": "Technical Support | Python | AngularJS | Networks | Customer Service | Administrative",
+        "description": "I worked as Technical Support at Intera Internet, where I was responsible for customer monitoring and technical support. Beyond technical skills, I developed my customer service capabilities and worked extensively on my soft skills. My manager provided access to the Alura platform as a benefit, which allowed me to deepen my technology knowledge by watching over 100 hours of courses during my time at the company. This experience was fundamental to my professional growth, combining practical and theoretical learning."
+      },
+      {
+        "year": "2016 - 2018",
+        "company": "Grupo Ferreira Neves",
+        "role": "Trainee Software Developer | Java Swing - JavaFX - PHP - JQuery - Bootstrap",
+        "description": "I developed an access control and monitoring system for condominium security, using Java Swing for the desktop interface and PostgreSQL to manage registrations and entry/exit records. The system generated daily reports for the security team and sent notifications via email and SMS in case of incidents. This project provided me with experience in desktop application development, database design, and programming logic."
+      }
+    ]
+  },
+  "academic": {
+    "subtitle": "Academic Results",
+    "title": "Higher Education - Complete 🎓",
+    "description": "Throughout my Bachelor's in Software Engineering, I experienced projects with programming languages such as Java, Python, JavaScript and C++, as well as frameworks like Spring Boot, Django and React. I also gained experience with relational databases (MySQL, PostgreSQL) and non-relational (MongoDB), and version control tools like Git and all project management aspects, end-to-end, being able to work at any stage of the development process.",
+    "certifications": "Certifications",
+    "relevantCourses": "Relevant Courses",
+    "viewDiploma": "View Diploma",
+    "viewCertification": "View Certification",
+    "viewCertificate": "View Certificate",
+    "items": {
+      "degree": {
+        "title": "Software Engineering",
+        "entity": "Pitágoras Unopar Anhanguera University"
+      },
+      "amazonQ": {
+        "title": "Amazon Q Developer Getting Started",
+        "entity": "Amazon Web Services (AWS)",
+        "description": "It covers topics like Code Agent, Vibe Coding and Amazon Q tools"
+      },
+      "english": {
+        "title": "English Certificate (B1 Intermediate)",
+        "entity": "EF SET English"
+      },
+      "frontend": {
+        "title": "Frontend Deveveloper (React.js)",
+        "entity": "HackerRank",
+        "description": "It covers topics like React, CSS, and JavaScript."
+      },
+      "softwareEngineer": {
+        "title": "Software Engineer",
+        "entity": "HackerRank",
+        "description": "It covers topics like Problem solving, SQL, and REST API."
+      }
+    }
+  },
+  "backToTop": {
+    "tooltip": "Back to Top"
+  },
   "footer": {
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "connectTitle": "Liked the profile? Let's <strong>connect!</strong>",
+    "welcomeMessage": "You will be welcome on my networks",
+    "available": "Available"
   }
 }

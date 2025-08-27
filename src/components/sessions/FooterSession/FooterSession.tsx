@@ -2,8 +2,10 @@ import { Box, Typography, Link, IconButton, Tooltip } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export default function FooterSession() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -18,11 +20,14 @@ export default function FooterSession() {
         width: "100%",
       }}
     >
-      <Typography component="h4" variant="h6" sx={{ mb: 2 }}>
-        Gostou do perfil? Vamos nos <strong>conectar!</strong>
-      </Typography>
+      <Typography 
+        component="h4" 
+        variant="h6" 
+        sx={{ mb: 2 }}
+        dangerouslySetInnerHTML={{ __html: t('footer.connectTitle') }}
+      />
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Você será bem-vindo(a) em minhas redes
+        {t('footer.welcomeMessage')}
       </Typography>
       <Box
         sx={{ display: "flex", justifyContent: "center", gap: "1rem", mb: 4 }}
@@ -71,7 +76,7 @@ export default function FooterSession() {
           }}
         >
           Pedro Miguel Neves Demeu
-          <Tooltip title="Disponível">
+          <Tooltip title={t('footer.available')}>
             <Box
               aria-hidden="true"
               sx={(theme) => ({

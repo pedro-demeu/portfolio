@@ -15,8 +15,10 @@ import { useState } from "react";
 import { DegreeDialog } from "../../dialog";
 import { BadgeCertificationItem } from "./BadgeCertificationItem";
 import { AnimatedSection } from "../../core";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export default function AcademicSession() {
+  const { t } = useTranslation();
   const [openDegree, setOpenDegree] = useState(false);
   const [openFront, setOpenFront] = useState(false);
   const [openSoftEng, setOpenSoftEng] = useState(false);
@@ -85,7 +87,7 @@ const handleOpenAWSCertification = () => {
             textAlign: "center",
           }}
         >
-          Resultados Acadêmicos
+          {t('academic.subtitle')}
         </Typography>
         <Typography
           component="h3"
@@ -99,7 +101,7 @@ const handleOpenAWSCertification = () => {
             textAlign: "center",
           }}
         >
-          Ensino Superior - Completo 🎓
+          {t('academic.title')}
         </Typography>
         <Typography
           variant="body2"
@@ -108,19 +110,8 @@ const handleOpenAWSCertification = () => {
             color: "#ccc",
             marginBottom: "4rem",
           }}
-        >
-          Ao longo do Bacharel em <strong>Engenharia de Software</strong>,
-          vivenciei projetos com as linguagens de programação como{" "}
-          <strong>Java</strong>, <strong>Python</strong>,{" "}
-          <strong>JavaScript</strong> e <strong>C++</strong>, além de frameworks
-          como <strong>Spring Boot</strong>, <strong>Django</strong> e{" "}
-          <strong>React</strong>. Também adquiri experiência com bancos de dados
-          relacionais (<strong>MySQL</strong>, <strong>PostgreSQL</strong>) e
-          não relacionais (<strong>MongoDB</strong>), e ferramentas de controle
-          de versão como <strong>Git</strong> e toda a parte de gestão de
-          projetos, de ponta a ponta, sendo capaz de atuar em qualquer etapa do
-          processo de desenvolvimento.
-        </Typography>
+          dangerouslySetInnerHTML={{ __html: t('academic.description') }}
+        />
 
         <AnimatedSection animation="fadeInUp" delay={200}>
           <Box
@@ -130,9 +121,9 @@ const handleOpenAWSCertification = () => {
           >
             <BadgeCertificationItem
               src={unoparLogo}
-              title="Engenharia de Software"
-              entityName="Universidade Pitágoras Unopar Anhanguera"
-              actionText="Visualizar Diploma"
+              title={t('academic.items.degree.title')}
+              entityName={t('academic.items.degree.entity')}
+              actionText={t('academic.viewDiploma')}
               startYear={2020}
               endYear={2024}
               onClick={handleOpen}
@@ -149,7 +140,7 @@ const handleOpenAWSCertification = () => {
               fontWeight: 700,
             }}
           >
-            Certificações
+            {t('academic.certifications')}
           </Typography>
         </AnimatedSection>
         <AnimatedSection animation="fadeInLeft" delay={600}>
@@ -160,12 +151,12 @@ const handleOpenAWSCertification = () => {
           >
             <BadgeCertificationItem
               src={awsLogo}
-              title="Amazon Q Developer Getting Started"
-              entityName="Amazon Web Services (AWS)"
-              actionText="Visualizar Certificação"
+              title={t('academic.items.amazonQ.title')}
+              entityName={t('academic.items.amazonQ.entity')}
+              actionText={t('academic.viewCertification')}
               startYear={2025}
               onClick={handleOpenAWSCertification}
-              description="It covers topics like Code Agent, Vibe Coding and Amazon Q tools"
+              description={t('academic.items.amazonQ.description')}
             />
           </Box>
         </AnimatedSection>
@@ -178,9 +169,9 @@ const handleOpenAWSCertification = () => {
           >
             <BadgeCertificationItem
               src={efSetEnglishLogo}
-              title="English Certificate (B1 Intermediate)"
-              entityName="EF SET English"
-              actionText="Visualizar Certificação"
+              title={t('academic.items.english.title')}
+              entityName={t('academic.items.english.entity')}
+              actionText={t('academic.viewCertification')}
               startYear={2025}
               redirectUrl="https://cert.efset.org/en/6LwF65"
               redirect
@@ -198,7 +189,7 @@ const handleOpenAWSCertification = () => {
               fontWeight: 700,
             }}
           >
-            Cursos relevantes
+            {t('academic.relevantCourses')}
           </Typography>
         </AnimatedSection>
         <AnimatedSection animation="fadeInLeft" delay={1200}>
@@ -209,12 +200,12 @@ const handleOpenAWSCertification = () => {
           >
             <BadgeCertificationItem
               src={hackerRankLogo}
-              title="Frontend Deveveloper (React.js)"
-              entityName="HackerRank"
-              actionText="Visualizar Certificado"
+              title={t('academic.items.frontend.title')}
+              entityName={t('academic.items.frontend.entity')}
+              actionText={t('academic.viewCertificate')}
               startYear={2020}
               onClick={handleOpenFront}
-              description="It covers topics like React, CSS, and JavaScript."
+              description={t('academic.items.frontend.description')}
             />
           </Box>
         </AnimatedSection>
@@ -226,12 +217,12 @@ const handleOpenAWSCertification = () => {
           >
             <BadgeCertificationItem
               src={hackerRankLogo}
-              title="Software Engineer"
-              entityName="HackerRank"
-              actionText="Visualizar Certificado"
+              title={t('academic.items.softwareEngineer.title')}
+              entityName={t('academic.items.softwareEngineer.entity')}
+              actionText={t('academic.viewCertificate')}
               startYear={2020}
               onClick={handleOpenSoftEng}
-              description="It covers topics like Problem solving, SQL, and REST API."
+              description={t('academic.items.softwareEngineer.description')}
             />
           </Box>
         </AnimatedSection>

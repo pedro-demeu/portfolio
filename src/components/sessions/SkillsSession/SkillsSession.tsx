@@ -1,5 +1,6 @@
 import { Box, Chip, Container, Tooltip, Typography } from "@mui/material";
 import { AnimatedSection } from "../../core";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 const technologies = [
   {
@@ -191,6 +192,8 @@ const technologies = [
 ];
 
 export default function SkillsSession() {
+  const { t } = useTranslation();
+  
   return (
     <Box
       sx={{
@@ -219,7 +222,7 @@ export default function SkillsSession() {
             textAlign: "center",
           }}
         >
-          Hard Skills
+          {t('skills.subtitle')}
         </Typography>
         <Typography
           component="h3"
@@ -233,7 +236,7 @@ export default function SkillsSession() {
             mt: "0.5rem",
           }}
         >
-          Habilidades Técnicas
+          {t('skills.technicalSkills')}
         </Typography>
         <Typography
           variant="body2"
@@ -247,14 +250,8 @@ export default function SkillsSession() {
             margin: "0 auto",
             pb: 6,
           }}
-        >
-          Possuo um amplo conjunto de habilidades técnicas que abrangem desde o
-          desenvolvimento <strong>frontend</strong> com <strong>React</strong> e{" "}
-          <strong>TypeScript</strong> até o <strong>backend</strong> com 
-          <strong> Node.js e Java</strong>. Tenho experiência em frameworks
-          modernos, bancos de dados, e metodologias ágeis, sempre buscando as
-          melhores práticas de desenvolvimento.
-        </Typography>
+          dangerouslySetInnerHTML={{ __html: t('skills.description') }}
+        />
         <Box
           sx={{
             display: "flex",
@@ -271,7 +268,7 @@ export default function SkillsSession() {
               animation="fadeInUp"
               delay={index * 50}
             >
-              <Tooltip title={tech.description} placement="top">
+              <Tooltip title={t(`skills.technologies.${tech.id}`)} placement="top">
                 <Chip
                   label={tech.name}
                   sx={{

@@ -7,8 +7,11 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import WorkIcon from "@mui/icons-material/Work";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export default function WorkTimeLineSession() {
+  const { t } = useTranslation();
+  
   const workExperiences = [
     {
       year: "2021 - 2025 (atualmente)",
@@ -104,7 +107,7 @@ export default function WorkTimeLineSession() {
             textAlign: "center",
           }}
         >
-          Experiência
+          {t('work.title')}
         </Typography>
         <Typography
           component="h3"
@@ -118,7 +121,7 @@ export default function WorkTimeLineSession() {
             mt: "0.5rem",
           }}
         >
-          Profissional
+          {t('work.subtitle')}
         </Typography>
         <Typography
           variant="body1"
@@ -133,14 +136,13 @@ export default function WorkTimeLineSession() {
             mb: 6,
           }}
         >
-          Nessa sessão, compartilho minhas{" "}
-          <strong>experiências profissionais</strong> e trajetória no{" "}
-          <strong>mercado de trabalho</strong>, destacando minhas{" "}
-          <strong>contribuições</strong> e <strong>aprendizados</strong> ao
-          longo dos anos.
+          {t('work.description')}{" "}
+          <strong>{t('work.experiences')}</strong> {t('work.and')}{" "}
+          <strong>{t('work.market')}</strong>{t('work.highlighting')}{" "}
+          <strong>{t('work.contributions')}</strong> {t('work.andLearning')} <strong>{t('work.learnings')}</strong> {t('work.overYears')}
         </Typography>
         <Timeline position="alternate">
-          {workExperiences.map((experience, index) => (
+          {t('work.experiences', { returnObjects: true }).map((experience: any, index: number) => (
             <TimelineItem key={index}>
               <TimelineOppositeContent
                 sx={{ m: "auto 0", color: "#f0f0f0", opacity: 0.7 }}
@@ -157,7 +159,7 @@ export default function WorkTimeLineSession() {
                 >
                   <WorkIcon sx={{ color: "#fff" }} fontSize="small" />
                 </TimelineDot>
-                {index !== workExperiences.length - 1 && (
+                {index !== t('work.experiences', { returnObjects: true }).length - 1 && (
                   <TimelineConnector
                     sx={{
                       background: "linear-gradient(45deg, #ff8a00, #e52e71)",
@@ -187,7 +189,7 @@ export default function WorkTimeLineSession() {
                 </Typography>
                 <Typography sx={{
                   mt: 4,
-                }}>Competências</Typography>
+                }}>{t('work.skills')}</Typography>
                 <br />
                 <Box
                   sx={{
@@ -198,7 +200,7 @@ export default function WorkTimeLineSession() {
                     gap: "0.5rem",
                   }}
                 >
-                  {experience.skills?.map((skill, skillIndex) => (
+                  {workExperiences[index]?.skills?.map((skill, skillIndex) => (
                     <Chip
                       key={skillIndex}
                       label={skill}

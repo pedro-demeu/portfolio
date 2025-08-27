@@ -8,9 +8,11 @@ import {
   IconButton,
 } from "@mui/material";
 import { AnimatedSection } from "../../core";
+import { useTranslation } from "../../../hooks/useTranslation";
 import mockData from "./mock";
 
 export default function ProjectsSession() {
+  const { t } = useTranslation();
   const projects = mockData.projects;
   return (
     <Box
@@ -40,7 +42,7 @@ export default function ProjectsSession() {
             textAlign: "center",
           }}
         >
-          Resultados do mundo real
+          {t('projects.subtitle')}
         </Typography>
         <Typography
           component="h3"
@@ -54,7 +56,7 @@ export default function ProjectsSession() {
             mt: "0.5rem",
           }}
         >
-          Projetos em destaque
+          {t('projects.featuredTitle')}
         </Typography>
         <Typography
           variant="body1"
@@ -67,8 +69,7 @@ export default function ProjectsSession() {
             margin: "0 auto",
           }}
         >
-          Aqui estão alguns projetos que eu trabalhei recentemente. Ajudando
-          meus clientes a alcançar seus objetivos.
+          {t('projects.description')}
         </Typography>
 
         <Box
@@ -133,7 +134,7 @@ export default function ProjectsSession() {
                     textTransform: 'uppercase'
                   }}
                 >
-                  {project.titulo}
+                  {t(`projects.items.${project.id}.title`)}
                 </Typography>
                 {!project.active && (
                   <img
@@ -146,7 +147,7 @@ export default function ProjectsSession() {
                   variant="body2"
                   sx={{ marginBottom: 2, color: "#ccc", textAlign: "justify", fontSize: 16, px: 2, mt: 2 }}
                 >
-                  {project.descricao}
+                  {t(`projects.items.${project.id}.description`)}
                 </Typography>
                 <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: 'center', gap: 1, mt: 2, mb: 1, }}>
                   {project.tecnologias.map((tecnologia, index) => (
@@ -166,7 +167,7 @@ export default function ProjectsSession() {
                       justifyContent: 'center',
                     }}
                   >
-                    <Typography mt={1} mr={1} variant="body1" textTransform="uppercase" color="white">Você está aqui</Typography><IconButton>🎉</IconButton>
+                    <Typography mt={1} mr={1} variant="body1" textTransform="uppercase" color="white">{t('projects.youAreHere')}</Typography><IconButton>🎉</IconButton>
                   </Typography>
                 ) : (
                   <Box sx={{ textAlign: "center", marginTop: 2 }}>
@@ -175,7 +176,7 @@ export default function ProjectsSession() {
                       target="_blank"
                       style={{ color: "#90caf9", textDecoration: "none" }}
                     >
-                      Ver projeto
+                      {t('projects.viewProject')}
                     </a>
                   </Box>
                 )}

@@ -36,14 +36,77 @@
   },
   "projects": {
     "title": "Projetos",
-    "viewProject": "Ver Projeto",
-    "viewCode": "Ver Código"
+    "subtitle": "Resultados do mundo real",
+    "featuredTitle": "Projetos em destaque",
+    "description": "Aqui estão alguns projetos que eu trabalhei recentemente. Ajudando meus clientes a alcançar seus objetivos.",
+    "viewProject": "Ver projeto",
+    "viewCode": "Ver Código",
+    "youAreHere": "Você está aqui",
+    "items": {
+      "1": {
+        "title": "VMS Cloud",
+        "description": "Produto de vídeo-monitoramento, onde eu desenvolvo novas funcionalidades e mantenho a aplicação em produção já há 4 anos."
+      },
+      "2": {
+        "title": "E-Commerce Web Application",
+        "description": "Projeto E-commerce feito com NextJS@14 para aprofundar meus conhecimentos na tecnologia"
+      },
+      "3": {
+        "title": "Portfolio Website",
+        "description": "Desenvolvimento deste site de portfólio para exibir habilidades, projetos e jornada profissional."
+      },
+      "4": {
+        "title": "API de processamento e conversão de videos com FFMPEG",
+        "description": "Desenvolvi essa API para processamento e conversão de vídeos (MP4, HEVC, M3u8, FLV)"
+      },
+      "5": {
+        "title": "Teste de Conexão Local",
+        "description": "Desenvolvi minha ferramenta de teste de velocidade de conexão. Gera um relatório ao final com link para o speed test."
+      },
+      "6": {
+        "title": "Chat-room",
+        "description": "Chat Real-time com Web Sockets simula um Chat de Bate-papo. Desenvolvido para demonstrar o uso correto dos Web Sockets durante a faculdade."
+      }
+    }
   },
   "skills": {
     "title": "Habilidades",
+    "subtitle": "Hard Skills",
+    "technicalSkills": "Habilidades Técnicas",
+    "description": "Possuo um amplo conjunto de habilidades técnicas que abrangem desde o desenvolvimento <strong>frontend</strong> com <strong>React</strong> e <strong>TypeScript</strong> até o <strong>backend</strong> com <strong>Node.js e Java</strong>. Tenho experiência em frameworks modernos, bancos de dados, e metodologias ágeis, sempre buscando as melhores práticas de desenvolvimento.",
     "frontend": "Frontend",
     "backend": "Backend",
-    "tools": "Ferramentas"
+    "tools": "Ferramentas",
+    "technologies": {
+      "1": "Uma biblioteca JavaScript para a construção de interfaces de usuário.",
+      "2": "A linguagem de marcação padrão para a criação de páginas da web.",
+      "3": "Um superconjunto tipado do JavaScript que é compilado para JavaScript puro.",
+      "4": "Uma linguagem de estilo usada para definir a apresentação de um documento.",
+      "5": "Uma linguagem de programação de alto nível, dinâmica e multiparadigma.",
+      "6": "Uma biblioteca de gerenciamento de estado para React.",
+      "7": "Um popular framework de componentes para React.",
+      "8": "Um framework CSS utilitário para desenvolvimento rápido de interfaces.",
+      "9": "Um framework para criar aplicativos móveis nativos usando React.",
+      "10": "Um framework React para renderização no servidor e exportação estática de aplicações.",
+      "11": "Uma biblioteca para React e React Native que permite escrever estilos dentro do JavaScript.",
+      "12": "Um framework de testes para JavaScript.",
+      "13": "Uma plataforma para hospedagem de aplicações frontend e sites estáticos.",
+      "14": "Um sistema distribuído de controle de versões.",
+      "15": "Uma solução de gerenciamento de repositórios Git.",
+      "16": "Um conjunto de princípios para desenvolvimento de software ágil.",
+      "17": "Uma linguagem de programação orientada a objetos e de alto nível.",
+      "18": "Um banco de dados NoSQL orientado a documentos.",
+      "19": "Um sistema de gerenciamento de banco de dados relacional de código aberto.",
+      "20": "Uma plataforma para criação e gerenciamento de containers.",
+      "21": "Um ambiente de execução JavaScript baseado no motor V8 do Chrome.",
+      "22": "Um framework progressivo para desenvolvimento de aplicações server-side com Node.js.",
+      "23": "Um framework Java para criação de microsserviços.",
+      "24": "Um armazenamento de dados em memória utilizado como banco de dados, cache e message broker.",
+      "25": "Um framework React para a construção de experiências de usuário otimizadas.",
+      "26": "Um protocolo de comunicação para transmissão de mídia via internet.",
+      "27": "Um player de vídeo HTML5 de código aberto.",
+      "28": "Um framework web minimalista e flexível para Node.js."
+    }
   },
   "contact": {
     "title": "Contato",
@@ -54,7 +117,88 @@
     "success": "Mensagem enviada com sucesso!",
     "error": "Erro ao enviar mensagem. Tente novamente."
   },
+  "work": {
+    "title": "Experiência",
+    "subtitle": "Profissional",
+    "description": "Nessa sessão, compartilho minhas",
+    "experiences": "experiências profissionais",
+    "and": "e trajetória no",
+    "market": "mercado de trabalho",
+    "highlighting": ", destacando minhas",
+    "contributions": "contribuições",
+    "andLearning": "e",
+    "learnings": "aprendizados",
+    "overYears": "ao longo dos anos.",
+    "skills": "Competências",
+    "experiences": [
+      {
+        "year": "2021 - 2025 (atualmente)",
+        "company": "Segware Security Performance",
+        "role": "Frontend Software Engineer (Pleno)",
+        "description": "Na Segware, contribuo significativamente para o desenvolvimento de novas funcionalidades e aprimoramento dos produtos da empresa, impactando milhares de clientes. Produto de video-monitoramento em núvem (VMS Cloud)"
+      },
+      {
+        "year": "2020 - 2021",
+        "company": "BlockIT Security",
+        "role": "FullStack Software Engineer (Part-time)",
+        "description": "Na BlockIT, uma software house, tive um papel ativo e essencial no desenvolvimento de software. Contribuí significativamente para a melhoria contínua de softwares existentes, garantindo uma experiência otimizada para os usuários. Além disso, participei ativamente da criação e implementação de novos projetos inovadores, incluindo ERPs, CRMs e Landing Pages."
+      },
+      {
+        "year": "2020 - 2021",
+        "company": "Provedor de Internet - Intera",
+        "role": "Suporte Técnico | Python | AngularJS | Redes | Atendimento ao Cliente | Administrativo",
+        "description": "Trabalhei como Suporte Técnico na Intera Internet, onde fui responsável pelo monitoramento de clientes e suporte técnico. Além das habilidades técnicas, desenvolvi minha capacidade de atendimento ao cliente e trabalhei bastante minhas soft skills. Meu gestor disponibilizava acesso à plataforma Alura como benefício, o que me permitiu aprofundar meus conhecimentos em tecnologia, assistindo a mais de 100 horas de cursos durante meu período na empresa. Essa experiência foi fundamental para meu crescimento profissional, combinando aprendizado prático e teórico."
+      },
+      {
+        "year": "2016 - 2018",
+        "company": "Grupo Ferreira Neves",
+        "role": "Trainee Software Developer | Java Swing - JavaFX - PHP - JQuery - Bootstrap",
+        "description": "Desenvolvi um sistema de controle de acesso e monitoramento para a segurança de condomínios, utilizando Java Swing para a interface desktop e PostgreSQL para gerenciar cadastros e registros de entrada/saída. O sistema gerava relatórios diários para a equipe de segurança e enviava notificações por e-mail e SMS em caso de incidentes. Esse projeto me proporcionou experiência em desenvolvimento de aplicações desktop, design de banco de dados e lógica de programação."
+      }
+    ]
+  },
+  "academic": {
+    "subtitle": "Resultados Acadêmicos",
+    "title": "Ensino Superior - Completo 🎓",
+    "description": "Ao longo do Bacharel em Engenharia de Software, vivenciei projetos com as linguagens de programação como Java, Python, JavaScript e C++, além de frameworks como Spring Boot, Django e React. Também adquiri experiência com bancos de dados relacionais (MySQL, PostgreSQL) e não relacionais (MongoDB), e ferramentas de controle de versão como Git e toda a parte de gestão de projetos, de ponta a ponta, sendo capaz de atuar em qualquer etapa do processo de desenvolvimento.",
+    "certifications": "Certificações",
+    "relevantCourses": "Cursos relevantes",
+    "viewDiploma": "Visualizar Diploma",
+    "viewCertification": "Visualizar Certificação",
+    "viewCertificate": "Visualizar Certificado",
+    "items": {
+      "degree": {
+        "title": "Engenharia de Software",
+        "entity": "Universidade Pitágoras Unopar Anhanguera"
+      },
+      "amazonQ": {
+        "title": "Amazon Q Developer Getting Started",
+        "entity": "Amazon Web Services (AWS)",
+        "description": "Abrange tópicos como Code Agent, Vibe Coding e ferramentas Amazon Q"
+      },
+      "english": {
+        "title": "English Certificate (B1 Intermediate)",
+        "entity": "EF SET English"
+      },
+      "frontend": {
+        "title": "Frontend Deveveloper (React.js)",
+        "entity": "HackerRank",
+        "description": "Abrange tópicos como React, CSS e JavaScript."
+      },
+      "softwareEngineer": {
+        "title": "Software Engineer",
+        "entity": "HackerRank",
+        "description": "Abrange tópicos como Resolução de problemas, SQL e REST API."
+      }
+    }
+  },
+  "backToTop": {
+    "tooltip": "Voltar ao Topo"
+  },
   "footer": {
-    "rights": "Todos os direitos reservados"
+    "rights": "Todos os direitos reservados",
+    "connectTitle": "Gostou do perfil? Vamos nos <strong>conectar!</strong>",
+    "welcomeMessage": "Você será bem-vindo(a) em minhas redes",
+    "available": "Disponível"
   }
 }

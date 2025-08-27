@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Fab, Tooltip, Zoom } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { useTranslation } from '../../../hooks/useTranslation';
 
 export default function BackToTopButton() {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -23,7 +25,7 @@ export default function BackToTopButton() {
 
   return (
     <Zoom in={isVisible}>
-      <Tooltip title="Voltar ao Topo">
+      <Tooltip title={t('backToTop.tooltip')}>
         <Fab
           onClick={scrollToTop}
           sx={{

@@ -11,7 +11,7 @@ import { useTranslation } from "../../../hooks/useTranslation";
 
 export default function WorkTimeLineSession() {
   const { t } = useTranslation();
-  
+
   const workExperiences = [
     {
       year: "2021 - 2025 (atualmente)",
@@ -142,78 +142,85 @@ export default function WorkTimeLineSession() {
           <strong>{t('work.contributions')}</strong> {t('work.andLearning')} <strong>{t('work.learnings')}</strong> {t('work.overYears')}
         </Typography>
         <Timeline position="alternate">
-          {t('work.experiences', { returnObjects: true }).map((experience: any, index: number) => (
-            <TimelineItem key={index}>
-              <TimelineOppositeContent
-                sx={{ m: "auto 0", color: "#f0f0f0", opacity: 0.7 }}
-                align="right"
-                variant="body2"
-              >
-                {experience.year}
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot
-                  sx={{
-                    background: "linear-gradient(45deg, #ff8a00, #e52e71)",
-                  }}
+          {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            t('work.experiences', { returnObjects: true }).map((experience: any, index: number) => (
+              <TimelineItem key={index}>
+                <TimelineOppositeContent
+                  sx={{ m: "auto 0", color: "#f0f0f0", opacity: 0.7 }}
+                  align="right"
+                  variant="body2"
                 >
-                  <WorkIcon sx={{ color: "#fff" }} fontSize="small" />
-                </TimelineDot>
-                {index !== t('work.experiences', { returnObjects: true }).length - 1 && (
-                  <TimelineConnector
+                  {experience.year}
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot
                     sx={{
                       background: "linear-gradient(45deg, #ff8a00, #e52e71)",
                     }}
-                  />
-                )}
-              </TimelineSeparator>
-              <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography
-                  variant="h6"
-                  component="span"
-                  sx={{ fontWeight: 700, color: "#f0f0f0" }}
-                >
-                  {experience.company}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ color: "#f0f0f0", opacity: 0.7 }}
-                >
-                  {experience.role}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ color: "#f0f0f0", opacity: 0.7, mt: 1 }}
-                >
-                  {experience.description}
-                </Typography>
-                <Typography sx={{
-                  mt: 4,
-                }}>{t('work.skills')}</Typography>
-                <br />
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                    gap: "0.5rem",
-                  }}
-                >
-                  {workExperiences[index]?.skills?.map((skill, skillIndex) => (
-                    <Chip
-                      key={skillIndex}
-                      label={skill}
-                      sx={{
-                        background: "linear-gradient(45deg, #ff8a00, #e52e71)",
-                        color: "#fff",
-                      }}
-                    />
-                  ))}
-                </Box>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
+                  >
+                    <WorkIcon sx={{ color: "#fff" }} fontSize="small" />
+                  </TimelineDot>
+                  {
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                    index !== t('work.experiences', { returnObjects: true }).length - 1 && (
+                      <TimelineConnector
+                        sx={{
+                          background: "linear-gradient(45deg, #ff8a00, #e52e71)",
+                        }}
+                      />
+                    )}
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: "12px", px: 2 }}>
+                  <Typography
+                    variant="h6"
+                    component="span"
+                    sx={{ fontWeight: 700, color: "#f0f0f0" }}
+                  >
+                    {experience.company}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "#f0f0f0", opacity: 0.7 }}
+                  >
+                    {experience.role}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "#f0f0f0", opacity: 0.7, mt: 1 }}
+                  >
+                    {experience.description}
+                  </Typography>
+                  <Typography sx={{
+                    mt: 4,
+                  }}>{t('work.skills')}</Typography>
+                  <br />
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "start",
+                      alignItems: "center",
+                      flexWrap: "wrap",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    {workExperiences[index]?.skills?.map((skill, skillIndex) => (
+                      <Chip
+                        key={skillIndex}
+                        label={skill}
+                        sx={{
+                          background: "linear-gradient(45deg, #ff8a00, #e52e71)",
+                          color: "#fff",
+                        }}
+                      />
+                    ))}
+                  </Box>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
         </Timeline>
       </Container>
     </Box>

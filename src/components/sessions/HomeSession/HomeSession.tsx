@@ -46,7 +46,7 @@ export default function HomeSession() {
     >
       <Box
         sx={{
-          position: "absolute",
+          position: "fixed",
           top: 20,
           right: 20,
           zIndex: 2,
